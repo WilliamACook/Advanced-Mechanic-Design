@@ -50,9 +50,11 @@ public class SplineRoad : MonoBehaviour
         Mesh m = new Mesh();
         List<Vector3> verts = new List<Vector3>();
         List<int> tris = new List<int>();
+        List<Vector2> uvs = new List<Vector2>();
         int offset = 0;
 
         int length = m_vertsP2.Count;
+        float uvOffset = 0f;
 
         for (int i = 1; i <= length; i++)
         {
@@ -84,10 +86,19 @@ public class SplineRoad : MonoBehaviour
 
             verts.AddRange(new List<Vector3> { p1, p2, p3, p4 });
             tris.AddRange(new List<int> { t1, t2, t3, t4, t5, t6 });
+
+            float distance = Vector3.Distance(p1, p2) / 4f;
+            float uvDistance = uvOffset + distance;
+            uvs.AddRange(new List<Vector2> { new Vector2(uvOffset, 0), new Vector2(uvOffset, 1), new Vector2(uvDistance, 0), new Vector2(uvDistance, 1) });
+
+            uvOffset += distance;
         }
 
         m.SetVertices(verts);
         m.SetTriangles(tris, 0);
+        m.RecalculateNormals();
+
+        m.SetUVs(0, uvs);
         m_meshFilter.mesh = m;
     }
 
