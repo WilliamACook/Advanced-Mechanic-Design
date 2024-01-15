@@ -37,6 +37,7 @@ public class SplineSampler : MonoBehaviour
             float3 right = Vector3.Cross(forward, upVector).normalized;
             p1 = position + (right * m_width);
             p2 = position + (-right * m_width);
+			NumSplines = m_splineContainer.Splines.Count;
         }
 
     }
@@ -56,15 +57,16 @@ public class SplineSampler : MonoBehaviour
         //Gizmos.DrawSphere(p2, 1f);
     }
 
-    public void SampleSplineWidth(float t, out Vector3 sampledP1, out Vector3 sampledP2)
+    public void SampleSplineWidth(int SplineIndex, float SampleTValue, float width, out Vector3 sampledP1, out Vector3 sampledP2)
     {
         if (m_splineContainer != null)
         {
-            m_splineContainer.Evaluate(m_splineIndex, t, out position, out forward, out upVector);
+			//Debug.Log(m_splineContainer.Splines.Count);
+            m_splineContainer.Evaluate(SplineIndex, SampleTValue, out position, out forward, out upVector);
 
             float3 right = Vector3.Cross(forward, upVector).normalized;
-            sampledP1 = position + (right * m_width);
-            sampledP2 = position + (-right * m_width);
+            sampledP1 = position + (right * width);
+            sampledP2 = position + (-right * width);
         }
         else
         {

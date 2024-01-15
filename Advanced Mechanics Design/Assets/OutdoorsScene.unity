@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2258.8909, g: 2400.8752, b: 3499.1567, a: 1}
+  m_IndirectSpecularColor: {r: 2265.8538, g: 2411.1135, b: 3519.7856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_splineContainer: {fileID: 1024594504}
   m_splineIndex: 0
-  NumSplines: 0
+  NumSplines: 2
   m_time: 0
   m_width: 2
 --- !u!114 &1024594504
@@ -2516,6 +2516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolution: 19
+  m_width: 2.5
 --- !u!23 &1024594507
 MeshRenderer:
   m_ObjectHideFlags: 0
