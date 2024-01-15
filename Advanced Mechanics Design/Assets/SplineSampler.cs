@@ -17,8 +17,8 @@ public class SplineSampler : MonoBehaviour
     [SerializeField]
     [Range(0f, 1f)]
     private float m_time;
-    [SerializeField]
-    public float m_width = 1f;
+    
+    private float m_width = 1f;
 
     float3 position;
     float3 tangent;
