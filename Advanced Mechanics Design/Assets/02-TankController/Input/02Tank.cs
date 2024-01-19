@@ -90,7 +90,7 @@ public partial class @AM_02Tank: IInputActionCollection2, IDisposable
                     ""id"": ""de9b7b69-49c6-4cc6-a3d1-65d4055a4c81"",
                     ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
-                    ""processors"": ""Invert,Clamp(min=-1,max=1)"",
+                    ""processors"": ""Clamp(min=-1,max=1)"",
                     ""groups"": """",
                     ""action"": ""Zoom"",
                     ""isComposite"": false,
