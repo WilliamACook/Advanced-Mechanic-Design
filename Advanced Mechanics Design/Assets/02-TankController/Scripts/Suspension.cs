@@ -16,7 +16,7 @@ public class Suspension : MonoBehaviour
 
 	public void Init(SuspensionSO inData)
 	{
-		
+
 	}
 
 	public bool GetGrounded()
@@ -26,6 +26,6 @@ public class Suspension : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		
+
 	}
 }

@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
 		m_Pitch -= change.y * m_PitchSensitivity;
 
 		// FOV
-		m_Yaw = Mathf.Clamp(m_Yaw, -80f, 80f);
+		//m_Yaw = Mathf.Clamp(m_Yaw, -80f, 80f);
 		m_Pitch = Mathf.Clamp(m_Pitch, -80f, 80f);
 
 		m_SpringArmTarget.rotation = Quaternion.Euler(m_Pitch, m_Yaw, 0f);
