@@ -2196,9 +2196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978a4516c94fb614a981e81a4acecda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraMount: {fileID: 880163268}
+  m_Camera: {fileID: 880163267}
   m_Turret: {fileID: 1013742092}
   m_Barrel: {fileID: 357494962}
+  m_RotationSpeed: 1
+  m_VerticalRotationSpeed: 1
 --- !u!54 &928874466
 Rigidbody:
   m_ObjectHideFlags: 0
