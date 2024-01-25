@@ -9,23 +9,49 @@ public class Suspension : MonoBehaviour
 
 	[SerializeField] private Transform m_Wheel;
 	[SerializeField] private Rigidbody m_RB;
+	[SerializeField] private LayerMask m_LayerMask;
+
+	[SerializeField] float stiffness = 2f;
+	[SerializeField] float damping = 0.14f;
 
 	private SuspensionSO m_Data;
-	private float m_SpringSize;
+	private float m_SpringSize = 1f;
 	private bool m_Grounded;
 
 	public void Init(SuspensionSO inData)
 	{
-
+		m_Data = inData;
 	}
 
 	public bool GetGrounded()
 	{
+		Debug.DrawRay(transform.position, -transform.up, Color.green);
+		RaycastHit hit;
+		if (Physics.Raycast(transform.position, -transform.up, out hit, m_LayerMask))
+		{
+			Debug.Log(hit.transform.name);
+			return true;
+		}
 		return false;
 	}
 
 	private void FixedUpdate()
 	{
+		Vector3 direction = Vector3.down;
+		Vector3 localDir = transform.TransformDirection(direction);
+		GetGrounded();
 
+		Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
+
+		Vector3 springVec = transform.position - transform.parent.position;
+
+		float susOffset = m_SpringSize - Vector3.Dot(springVec, localDir);
+
+		float susVel = Vector3.Dot(localDir, worldVec);
+
+		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
+		float susForce = (susOffset * stiffness) - (susVel * damping);
+
+		m_RB.AddForce(localDir * (susForce / m_RB.mass));
 	}
 }
