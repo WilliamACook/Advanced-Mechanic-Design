@@ -27,13 +27,19 @@ public class Suspension : MonoBehaviour
 	{
 		Debug.DrawRay(transform.position, -transform.up, Color.green);
 		RaycastHit hit;
-		if (Physics.Raycast(transform.position, -transform.up, out hit, m_LayerMask))
-		{
-			Debug.Log(hit.transform.name);
-			return true;
-		}
-		return false;
-	}
+
+        bool grounded = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
+		if (grounded)
+			Debug.Log("Tank is grounded");
+
+        if (grounded != m_Grounded)
+        {
+            m_Grounded = grounded;
+            OnGroundedChanged?.Invoke(m_Grounded);
+        }
+
+        return m_Grounded;
+    }
 
 	private void FixedUpdate()
 	{

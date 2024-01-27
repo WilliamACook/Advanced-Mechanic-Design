@@ -1070,13 +1070,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577714981}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.62, z: -0.64}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.9199998, z: -0.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 114474679}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 928874463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604312205
 GameObject:
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Data: {fileID: 11400000, guid: 116859067924452438fe04169eb456aa, type: 2}
-  m_RB: {fileID: 0}
+  m_RB: {fileID: 928874466}
   m_CameraController: {fileID: 928874460}
   m_TurretController: {fileID: 928874465}
   m_DriveWheels:
@@ -2187,6 +2187,7 @@ Transform:
   - {fileID: 1013742092}
   - {fileID: 55085257}
   - {fileID: 1937698541}
+  - {fileID: 577714982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &928874465
@@ -4277,7 +4278,6 @@ SceneRoots:
   - {fileID: 255864980}
   - {fileID: 1032749535}
   - {fileID: 928874463}
-  - {fileID: 577714982}
   - {fileID: 122966975}
   - {fileID: 970418847}
   - {fileID: 115009025}

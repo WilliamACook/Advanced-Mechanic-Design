@@ -17,5 +17,5 @@ MonoBehaviour:
   ShellData: {fileID: 11400000, guid: 4633360304bcc4a4880d9e8a27b07e49, type: 2}
   EngineData: {fileID: 11400000, guid: 34fb3e173e7f5c6449c4cb7f5bfcd551, type: 2}
   SuspensionData: {fileID: 11400000, guid: d9c378956b68bec4288742cfa6b8d87a, type: 2}
-  Health: 100
-  Mass_Tons: 1
+  Health: 800
+  Mass_Tons: 56.5

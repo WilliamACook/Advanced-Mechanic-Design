@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb827a807065334fb4d82993e1994d7, type: 3}
   m_Name: Tiger131_Barrel
   m_EditorClassIdentifier: 
-  Dispersion: 0
-  AimingTime: 0
-  MaxRange: 0
-  ReloadTime: 0
+  Dispersion: 0.37
+  AimingTime: 2.7
+  MaxRange: 350
+  ReloadTime: 8.8

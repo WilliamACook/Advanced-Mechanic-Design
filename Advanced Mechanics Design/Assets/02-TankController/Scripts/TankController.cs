@@ -110,7 +110,9 @@ public class TankController : MonoBehaviour
 	{
 		while (m_IsSteering)
 		{
-
+			float rotationAmount = m_InSteer * Time.deltaTime * 26;
+			Debug.Log(m_InSteer);
+			transform.Rotate(Vector3.up, rotationAmount);
 			yield return null;
 		}
 	}
@@ -153,6 +155,6 @@ public class TankController : MonoBehaviour
 
 	private void Handle_SuspensionGroundedChanged(bool newGrounded)
 	{
-
+		m_NumSuspensionsGrounded += newGrounded ? 1 : -1;
 	}
 }
