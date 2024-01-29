@@ -111,7 +111,7 @@ public class TankController : MonoBehaviour
 		while (m_IsSteering)
 		{
 			float rotationAmount = m_InSteer * Time.deltaTime * 26;
-			Debug.Log(m_InSteer);
+			//Debug.Log(m_InSteer);
 			transform.Rotate(Vector3.up, rotationAmount);
 			yield return null;
 		}

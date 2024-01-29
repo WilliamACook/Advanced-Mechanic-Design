@@ -30,7 +30,7 @@ public class Suspension : MonoBehaviour
 
         bool grounded = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
 		if (grounded)
-			Debug.Log("Tank is grounded");
+			//Debug.Log("Tank is grounded");
 
         if (grounded != m_Grounded)
         {

@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Tiger131_Engine
   m_EditorClassIdentifier: 
   HorsePower: 650
+  MaxSpeed: 11.8
+  MaxReverseSpeed: 3.33

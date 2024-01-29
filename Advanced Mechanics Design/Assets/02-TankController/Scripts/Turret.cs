@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Graphs;
@@ -71,8 +71,11 @@ public class Turret : MonoBehaviour
 		Quaternion barrelTargetRot = Quaternion.LookRotation(camUpVec);
 
 		m_Turret.rotation = Quaternion.Slerp(m_Turret.rotation, targetRot, m_RotationSpeed * Time.deltaTime);
+
+		// Barrel Roatation
+		// Use the turrets transform and not camera
 		
-		m_Barrel.rotation = Quaternion.Slerp(m_Barrel.rotation, barrelTargetRot, m_VerticalRotationSpeed * Time.deltaTime);
+		//m_Barrel.rotation = Quaternion.Slerp(m_Barrel.rotation, barrelTargetRot, m_VerticalRotationSpeed * Time.deltaTime);
  
 
         //	Vector3 camFwdVec = m_CameraMount.forward;
@@ -83,7 +86,7 @@ public class Turret : MonoBehaviour
 
         //	Debug.DrawLine(transform.position, transform.position + projectedVec * 50, Color.blue);
 
-        //	transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, m_Data.TurretData.TurretTraverseSpeed * Time.deltaTime);
+        	//m_Barrel.rotation = Quaternion.RotateTowards(m_Barrel.rotation, barrelTargetRot, m_Data.TurretData.TurretTraverseSpeed * Time.deltaTime * 10);
 
         yield return null;
 	}

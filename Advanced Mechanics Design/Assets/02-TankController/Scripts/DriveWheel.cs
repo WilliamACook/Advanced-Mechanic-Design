@@ -37,9 +37,11 @@ public class DriveWheel : MonoBehaviour
 	{
 		if (newGrounded == true)
 			m_NumGroundedWheels++;
-
-		if(newGrounded == false)
+		else if (newGrounded == false)
 			m_NumGroundedWheels--;
+
+		//if(newGrounded == false)
+		//	m_NumGroundedWheels--;
 	}
 
 	private void FixedUpdate()
@@ -52,6 +54,8 @@ public class DriveWheel : MonoBehaviour
 		{
 			Vector3 forward = transform.forward * m_Data.EngineData.HorsePower;
 			m_RB.AddForce(forward);
+
+			//Capped Speed
 			if (currentSpeed > m_ForwardMaxSpeed)
 				m_RB.velocity = m_RB.velocity.normalized * m_ForwardMaxSpeed;
 		}

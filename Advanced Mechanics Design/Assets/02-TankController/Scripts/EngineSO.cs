@@ -6,4 +6,6 @@ using UnityEngine;
 public class EngineSO : ScriptableObject
 {
 	public float HorsePower;
+	public float MaxSpeed;
+	public float MaxReverseSpeed;
 }
