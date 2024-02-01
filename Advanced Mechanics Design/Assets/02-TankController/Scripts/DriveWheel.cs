@@ -35,12 +35,15 @@ public class DriveWheel : MonoBehaviour
 
 	private void Handle_WheelGroundedChanged(bool newGrounded)
 	{
-		if (newGrounded == true)
+		Debug.Log("Grounded changed");
+		m_Grounded = newGrounded;
+		if (m_Grounded == true)
 			m_NumGroundedWheels++;
-		else if (newGrounded == false)
+		else 
 			m_NumGroundedWheels--;
+		
 
-		//if(newGrounded == false)
+		//if(m_Grounded == false)
 		//	m_NumGroundedWheels--;
 	}
 

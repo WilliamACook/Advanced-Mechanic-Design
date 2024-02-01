@@ -11,21 +11,23 @@ public class Suspension : MonoBehaviour
 	[SerializeField] private Rigidbody m_RB;
 	[SerializeField] private LayerMask m_LayerMask;
 
-	[SerializeField] float stiffness = 2f;
-	[SerializeField] float damping = 0.14f;
+	[SerializeField] float stiffness;
+	[SerializeField] float damping;
 
 	private SuspensionSO m_Data;
-	private float m_SpringSize = 1f;
+	private float m_SpringSize = 0.5f;
 	private bool m_Grounded;
 
 	public void Init(SuspensionSO inData)
 	{
 		m_Data = inData;
+		stiffness = m_Data.SuspensionStrength;
+		damping = m_Data.SuspensionDamper;
 	}
 
 	public bool GetGrounded()
 	{
-		Debug.DrawRay(transform.position, -transform.up, Color.green);
+		Debug.DrawRay(transform.position, -transform.up, Color.green, m_SpringSize);
 		RaycastHit hit;
 
         bool grounded = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
