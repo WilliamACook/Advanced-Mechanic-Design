@@ -27,3 +27,4 @@ public class EnemySpawnerBaker : Baker<EnemySpawnerAuthoring>
 		});
 	}
 }
+
