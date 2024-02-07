@@ -14,6 +14,8 @@ public class SplineRoad : MonoBehaviour
 	[SerializeField]
 	private float m_width;
 
+    [SerializeField] private GameObject cubePrefab;
+
     private SplineSampler m_splineSampler;
     private MeshFilter m_meshFilter;
 
@@ -55,6 +57,9 @@ public class SplineRoad : MonoBehaviour
 			m_vertsP1.Add(p1);
 			m_vertsP2.Add(p2);
 		}
+
+		BuildLights(m_vertsP1);
+		BuildLights(m_vertsP2);
 
 		//for (int i = 0; i < resolution; i++)
 		//{
@@ -167,4 +172,27 @@ public class SplineRoad : MonoBehaviour
             }
         }
     }
+
+	private void BuildLights(List<Vector3> points)
+	{
+		if(points != null)
+		{
+			for (int i = 0;i < points.Count;i++)
+			{
+				if(cubePrefab != null)
+				{
+					Vector3 leftDirection = m_vertsP2[i] - m_vertsP1[i];
+					Vector3 rightDirection = m_vertsP1[i] - m_vertsP2[i];
+
+					GameObject leftLights = Instantiate(cubePrefab, m_vertsP1[i], quaternion.identity);
+					GameObject rightLights = Instantiate(cubePrefab, m_vertsP2[i], quaternion.identity);
+
+					leftLights.transform.rotation = Quaternion.LookRotation(leftDirection, Vector3.up);
+					rightLights.transform.rotation = Quaternion.LookRotation(rightDirection, Vector3.up);
+					
+				}
+			}
+		}
+	}
+	
 }

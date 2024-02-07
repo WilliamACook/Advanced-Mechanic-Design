@@ -74,20 +74,17 @@ public class Turret : MonoBehaviour
 
 		// Barrel Roatation
 		// Use the turrets transform and not camera
-		
-		//m_Barrel.rotation = Quaternion.Slerp(m_Barrel.rotation, barrelTargetRot, m_VerticalRotationSpeed * Time.deltaTime);
- 
 
-        //	Vector3 camFwdVec = m_CameraMount.forward;
+		Vector3 camUp = m_Turret.forward;
 
-        //	Vector3 projectedVec = Vector3.ProjectOnPlane(camFwdVec, transform.parent.up);
 
-        //	Quaternion targetRot = Quaternion.LookRotation(projectedVec, transform.parent.up);
+		Quaternion target = Quaternion.LookRotation(m_Camera.transform.forward, camUp);
 
-        //	Debug.DrawLine(transform.position, transform.position + projectedVec * 50, Color.blue);
-
-        	//m_Barrel.rotation = Quaternion.RotateTowards(m_Barrel.rotation, barrelTargetRot, m_Data.TurretData.TurretTraverseSpeed * Time.deltaTime * 10);
-
+		m_Barrel.rotation = Quaternion.Slerp(m_Barrel.rotation, target, m_MaxVerticalAngle * Time.deltaTime);
+		Vector3 newEulerAngles = m_Barrel.rotation.eulerAngles;
+		newEulerAngles.x = 0;
+		newEulerAngles.z = 0;
+		m_Barrel.rotation = Quaternion.Euler(newEulerAngles);
         yield return null;
 	}
 }
