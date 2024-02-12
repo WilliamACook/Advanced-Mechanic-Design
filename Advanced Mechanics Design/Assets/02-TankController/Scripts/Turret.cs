@@ -77,14 +77,19 @@ public class Turret : MonoBehaviour
 
 		Vector3 camUp = m_Turret.forward;
 
+        float pitch = -m_Camera.transform.localEulerAngles.x;
 
-		Quaternion target = Quaternion.LookRotation(m_Camera.transform.forward, camUp);
+        // Calculate the target rotation for the barrel
+        Quaternion targetBarrelRotation = Quaternion.Euler(pitch, 0, 0);
 
-		m_Barrel.rotation = Quaternion.Slerp(m_Barrel.rotation, target, m_MaxVerticalAngle * Time.deltaTime);
-		Vector3 newEulerAngles = m_Barrel.rotation.eulerAngles;
-		newEulerAngles.x = 0;
-		newEulerAngles.z = 0;
-		m_Barrel.rotation = Quaternion.Euler(newEulerAngles);
+        // Apply rotation to the barrel only around its local X-axis
+        m_Barrel.localRotation = Quaternion.Lerp(m_Barrel.localRotation,targetBarrelRotation, 2 * Time.deltaTime);
+
+        //m_Barrel.rotation = Quaternion.Slerp(m_Barrel.rotation, target, m_MaxVerticalAngle * Time.deltaTime);
+        //Vector3 newEulerAngles = m_Barrel.rotation.eulerAngles;
+        //newEulerAngles.x = 0;
+        //newEulerAngles.z = 0;
+        //m_Barrel.rotation = Quaternion.Euler(newEulerAngles);
         yield return null;
 	}
 }

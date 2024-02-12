@@ -16,6 +16,9 @@ public class SplineRoad : MonoBehaviour
 
     [SerializeField] private GameObject cubePrefab;
 
+	[SerializeField]
+	int m_StreetLightSpacing = 1;
+
     private SplineSampler m_splineSampler;
     private MeshFilter m_meshFilter;
 
@@ -58,8 +61,6 @@ public class SplineRoad : MonoBehaviour
 			m_vertsP2.Add(p2);
 		}
 
-		BuildLights(m_vertsP1);
-		BuildLights(m_vertsP2);
 
 		//for (int i = 0; i < resolution; i++)
 		//{
@@ -164,6 +165,8 @@ public class SplineRoad : MonoBehaviour
             for (int i = 0; i < m_vertsP1.Count; i++)
             {
                 //Gizmos.DrawSphere(m_vertsP1[i], 1f);
+				BuildLights(m_vertsP1);
+				BuildLights(m_vertsP2);
                 Handles.SphereHandleCap(0, m_vertsP1[i] , quaternion.identity, 1f, EventType.Repaint);
                 Handles.SphereHandleCap(0, m_vertsP2[i], quaternion.identity, 1f, EventType.Repaint);
                 //Gizmos.DrawSphere(m_vertsP2[i], 1f);
@@ -173,11 +176,18 @@ public class SplineRoad : MonoBehaviour
         }
     }
 
+	private List<GameObject> m_StreetLights = new List<GameObject>();
 	private void BuildLights(List<Vector3> points)
 	{
 		if(points != null)
 		{
-			for (int i = 0;i < points.Count;i++)
+			foreach(GameObject light in m_StreetLights)
+			{
+				Destroy(light);
+			}
+			m_StreetLights.Clear();
+
+			for (int i = 0;i < points.Count; i += m_StreetLightSpacing)
 			{
 				if(cubePrefab != null)
 				{
@@ -189,6 +199,12 @@ public class SplineRoad : MonoBehaviour
 
 					leftLights.transform.rotation = Quaternion.LookRotation(leftDirection, Vector3.up);
 					rightLights.transform.rotation = Quaternion.LookRotation(rightDirection, Vector3.up);
+
+					// Make a List of Streetlights and Destroy them when changed
+					m_StreetLights.Add(leftLights);
+					m_StreetLights.Add(rightLights);	
+
+					//TODO Make Spacing for streetlights
 					
 				}
 			}
