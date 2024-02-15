@@ -370,7 +370,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputFile: Assets/03-WaveSystem/TestFiles/AMD_03_Simple_E.TomBen
-  blocks: []
+  blocks:
+  - type: 
+    name: 
+    id: 0
+    content: 
 --- !u!4 &695356975
 Transform:
   m_ObjectHideFlags: 0
