@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class TomBenBlockParser : MonoBehaviour
@@ -79,14 +80,27 @@ public class TomBenBlockParser : MonoBehaviour
 	{
 		while (!BufferHas("_Tom") && !ReachedEnd())
 			NextChar();
-
-		if (ReachedEnd())
-			return;
+        if (ReachedEnd())
+            return;
 
         //TODO Create Regex for header info
+        //string regexPattern = "(type|wave|cluster) - (\\d+) \\((.*?)\\) _Tom (.*?) _Ben";
+
+        //Regex regex = new Regex(regexPattern);
+
+        //Match regexMatch = regex.Match(fileContent);
+        //if (regexMatch.Success)
+        //{
+        //	currentBlock.type = regexMatch.Groups[1].Value;
+        //	//currentBlock.id = regexMatch.Groups[2].Value;
+        //	currentBlock.name = regexMatch.Groups[3].Value;
+        //	currentBlock.content = regexMatch.Groups[4].Value;
+
+        //}
         //TODO Move Matches
         //(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
-        //Correct expression (type|wave|cluster) - (\d+) \((.*?)\) _Tom (.*?) _Ben
+        //(type|wave|cluster) - (\d+) \((.*?)\) _Tom (.*?) _Ben
+        //(type|wave|cluster)\s*-\s*(\d+)\s*(?:\(([\w\s]+)\))?\s*_Tom\s*(.*?)\s*_Ben
 
         ChangeState(ParserState.InsideBlockBody);
 	}
