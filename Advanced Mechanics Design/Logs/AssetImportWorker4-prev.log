@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker3
+AssetImportWorker4
 -projectPath
 C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
 -logFile
-Logs/AssetImportWorker3.log
+Logs/AssetImportWorker4.log
 -srvPort
 51388
 Successfully changed project path to: C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
@@ -49,12 +49,12 @@ C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10972] Host "[IP] 192.168.1.189 [Port] 0 [Flags] 2 [Guid] 4145437575 [EditorId] 4145437575 [Version] 1048832 [Id] WindowsEditor(7,Williams-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12664] Host "[IP] 192.168.1.189 [Port] 0 [Flags] 2 [Guid] 1064102686 [EditorId] 1064102686 [Version] 1048832 [Id] WindowsEditor(7,Williams-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10972] Host "[IP] 192.168.1.189 [Port] 0 [Flags] 2 [Guid] 4145437575 [EditorId] 4145437575 [Version] 1048832 [Id] WindowsEditor(7,Williams-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12664] Host "[IP] 192.168.1.189 [Port] 0 [Flags] 2 [Guid] 1064102686 [EditorId] 1064102686 [Version] 1048832 [Id] WindowsEditor(7,Williams-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 17.21 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 16.31 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.16f1 (d2c21f0ef2f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -70,42 +70,42 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56472
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005083 seconds.
-- Loaded All Assemblies, in  0.254 seconds
+Registered in 0.004996 seconds.
+- Loaded All Assemblies, in  0.244 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.193 seconds
-Domain Reload Profiling: 445ms
-	BeginReloadAssembly (77ms)
+- Finished resetting the current domain, in  0.191 seconds
+Domain Reload Profiling: 435ms
+	BeginReloadAssembly (71ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (26ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (44ms)
+	initialDomainReloadingComplete (43ms)
 	LoadAllAssembliesAndSetupDomain (97ms)
-		LoadAssemblies (75ms)
+		LoadAssemblies (69ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (96ms)
 			TypeCache.Refresh (95ms)
 				TypeCache.ScanAssembly (86ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (193ms)
+	FinalizeReload (192ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (150ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
+			InitializePlatformSupportModulesInManaged (7ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
+			BeforeProcessingInitializeOnLoad (2ms)
 			ProcessInitializeOnLoadAttributes (103ms)
 			ProcessInitializeOnLoadMethodAttributes (34ms)
 			AfterProcessingInitializeOnLoad (0ms)
@@ -117,57 +117,57 @@ Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Pro
 Worker process is ready to serve import requests
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.867 seconds
-Refreshing native plugins compatible for Editor in 6.69 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.715 seconds
+Refreshing native plugins compatible for Editor in 6.26 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 260ms
+TypeManager.Initialize took: 250ms
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.248 seconds
-Domain Reload Profiling: 2110ms
-	BeginReloadAssembly (115ms)
+- Finished resetting the current domain, in  1.164 seconds
+Domain Reload Profiling: 1875ms
+	BeginReloadAssembly (107ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (15ms)
-	RebuildCommonClasses (30ms)
+	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (671ms)
-		LoadAssemblies (376ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (538ms)
+		LoadAssemblies (328ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (360ms)
-			TypeCache.Refresh (313ms)
-				TypeCache.ScanAssembly (295ms)
-			ScanForSourceGeneratedMonoScriptInfo (38ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (1248ms)
+		AnalyzeDomain (271ms)
+			TypeCache.Refresh (234ms)
+				TypeCache.ScanAssembly (220ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1164ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1106ms)
+		SetupLoadedEditorAssemblies (1014ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (4ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (85ms)
-			ProcessInitializeOnLoadAttributes (716ms)
-			ProcessInitializeOnLoadMethodAttributes (292ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (671ms)
+			ProcessInitializeOnLoadMethodAttributes (251ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (4ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 6.74 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 6.55 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 8921 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 164 unused Assets / (3.9 MB). Loaded Objects now: 9369.
 Memory consumption went from 367.6 MB to 363.7 MB.
-Total: 4.793900 ms (FindLiveObjects: 0.408100 ms CreateObjectMapping: 0.327700 ms MarkObjects: 3.561300 ms  DeleteObjects: 0.496100 ms)
+Total: 5.218700 ms (FindLiveObjects: 0.446900 ms CreateObjectMapping: 0.242300 ms MarkObjects: 4.100000 ms  DeleteObjects: 0.428600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:DOTSType/UnityEditor.Snap.SnapSettingsWindow: 5fb792d44d0bbc465fb792d44d0bbc46 -> 
@@ -748,7 +748,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.VFX.IncrementStripIndexOnStart: a8732119c3b0a697a8732119c3b0a697 -> 
   custom:DOTSType/UnityEditor.TerrainTools.PaintTextureTool: ffc2724e2c8f19d7ffc2724e2c8f19d7 -> 
   custom:DOTSType/UnityEditor.Rendering.DebugWindow: a085ba452d56bbc0a085ba452d56bbc0 -> 
-  custom:DOTSAllSystemsVersion: 17eb38a100707ee9fb441a378edfb7b4 -> 
+  custom:DOTSAllSystemsVersion: 487e2ed7974ca293c8500170ab9a5fc9 -> 
   custom:DOTSType/UnityEditor.SplitView: 1beb7074fb11369c1beb7074fb11369c -> 
   custom:DOTSType/UnityEditor.AnimEditor: b4c35bab8cb8fa80b4c35bab8cb8fa80 -> 
   custom:DOTSType/Unity.Physics.GraphicsIntegration.PhysicsGraphicalInterpolationBuffer: d0331ba26935bdfed0331ba26935bdfe -> 
@@ -982,6 +982,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Rendering.ProbeTouchupVolumeEditor: 06ffa1f14ab0e5bc06ffa1f14ab0e5bc -> 
   custom:DOTSType/UnityEditor.OcclusionCullingWindow: b3fa360b2548ba22b3fa360b2548ba22 -> 
   custom:DOTSType/UnityEditor.ShaderGraph.ShaderGraphImporterEditor: f1d0b3182054f6c3f1d0b3182054f6c3 -> 
+  custom:ProjectSettings/EntitiesClientSettings.asset: 57fa4463d8597ee36c3803b5983b6213 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnJointBreak2DMessageListener: a8b76952c6d9c48aa8b76952c6d9c48a -> 
   custom:DOTSType/UnityEngine.InputSystem.UI.VirtualMouseInput: 4ba7c830e3fd5e2f4ba7c830e3fd5e2f -> 
   custom:DOTSType/UnityEditor.VFX.Operator.Epsilon: 242901fdd64670d2242901fdd64670d2 -> 
@@ -2298,64 +2299,72 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Search.ASIEI05: 443471f4b46f9067443471f4b46f9067 -> 
   custom:DOTSType/UnityEditor.VFX.HDRP.VFXHDRPSubOutput: 5665f73fd0c521065665f73fd0c52106 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 3659.720929 seconds.
+  path: Assets/01-SplineDynamicMesh/Scripts/01-Spline-USERNAME.asmdef
+  artifactKey: Guid(dbf26370c837d73458970c17715bbd83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/01-SplineDynamicMesh/Scripts/01-Spline-USERNAME.asmdef using Guid(dbf26370c837d73458970c17715bbd83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3898c3937e123d16a5240e1fbd53bf2e') in 0.001738 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
 Received Prepare
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.509 seconds
-Refreshing native plugins compatible for Editor in 8.31 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.928 seconds
+Refreshing native plugins compatible for Editor in 12.47 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 293ms
+TypeManager.Initialize took: 416ms
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.994 seconds
-Domain Reload Profiling: 2497ms
-	BeginReloadAssembly (192ms)
+- Finished resetting the current domain, in  4.347 seconds
+Domain Reload Profiling: 5266ms
+	BeginReloadAssembly (294ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (3ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (74ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (235ms)
-		LoadAssemblies (283ms)
+		CreateAndSetChildDomain (120ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (513ms)
+		LoadAssemblies (484ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (22ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1995ms)
+		AnalyzeDomain (132ms)
+			TypeCache.Refresh (23ms)
+				TypeCache.ScanAssembly (3ms)
+			ScanForSourceGeneratedMonoScriptInfo (89ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (4348ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1008ms)
+		SetupLoadedEditorAssemblies (1386ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (735ms)
-			ProcessInitializeOnLoadMethodAttributes (172ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (165ms)
+			ProcessInitializeOnLoadAttributes (1035ms)
+			ProcessInitializeOnLoadMethodAttributes (165ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (43ms)
-Refreshing native plugins compatible for Editor in 7.38 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (33ms)
+Refreshing native plugins compatible for Editor in 11.51 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 8578 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 117 unused Assets / (3.8 MB). Loaded Objects now: 9373.
 Memory consumption went from 325.7 MB to 321.8 MB.
-Total: 5.655800 ms (FindLiveObjects: 0.867600 ms CreateObjectMapping: 0.557400 ms MarkObjects: 3.678500 ms  DeleteObjects: 0.550900 ms)
+Total: 8.236000 ms (FindLiveObjects: 0.780300 ms CreateObjectMapping: 0.816800 ms MarkObjects: 5.806300 ms  DeleteObjects: 0.831200 ms)
 
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 0 unused Assets / (0.9 MB). Loaded Objects now: 9373.
 Memory consumption went from 321.8 MB to 320.9 MB.
-Total: 4.344400 ms (FindLiveObjects: 0.496700 ms CreateObjectMapping: 0.298900 ms MarkObjects: 3.470700 ms  DeleteObjects: 0.077200 ms)
+Total: 8.191900 ms (FindLiveObjects: 0.805500 ms CreateObjectMapping: 0.477600 ms MarkObjects: 6.747400 ms  DeleteObjects: 0.160100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -2937,7 +2946,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.VFX.IncrementStripIndexOnStart: a8732119c3b0a697a8732119c3b0a697 -> 
   custom:DOTSType/UnityEditor.TerrainTools.PaintTextureTool: ffc2724e2c8f19d7ffc2724e2c8f19d7 -> 
   custom:DOTSType/UnityEditor.Rendering.DebugWindow: a085ba452d56bbc0a085ba452d56bbc0 -> 
-  custom:DOTSAllSystemsVersion: 17eb38a100707ee9fb441a378edfb7b4 -> 
+  custom:DOTSAllSystemsVersion: 0de8dfff7dd57326d26da125786f91f5 -> 
   custom:DOTSType/UnityEditor.SplitView: 1beb7074fb11369c1beb7074fb11369c -> 
   custom:DOTSType/UnityEditor.AnimEditor: b4c35bab8cb8fa80b4c35bab8cb8fa80 -> 
   custom:DOTSType/Unity.Physics.GraphicsIntegration.PhysicsGraphicalInterpolationBuffer: d0331ba26935bdfed0331ba26935bdfe -> 
@@ -2974,7 +2983,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.VFX.VFXBasicSpawnerEditor: a98b6d285d4bdf9aa98b6d285d4bdf9a -> 
   custom:DOTSType/Unity.PlasticSCM.Editor.Views.CreateWorkspace.Dialogs.RepositoryExplorerDialog: 0c94970f36d9b0a50c94970f36d9b0a5 -> 
   custom:DOTSType/UnityEditor.Timeline.BasicAssetInspector: d8fe74a1589d580dd8fe74a1589d580d -> 
-  custom:DOTSType/SplineRoad: 69a21f3bc5dc676169a21f3bc5dc6761 -> 
+  custom:DOTSType/SplineRoad: 6e806115d2b8cf8e6e806115d2b8cf8e -> 
   custom:DOTSType/UnityEngine.PhysicsUpdateBehaviour2D: bbb8b5e9970986dbbbb8b5e9970986db -> 
   custom:DOTSType/UnityEngine.TerrainData: cb45a13d30d4e8f8cb45a13d30d4e8f8 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnCancelMessageListener: af46241056da6371af46241056da6371 -> 
@@ -3171,6 +3180,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Rendering.ProbeTouchupVolumeEditor: 06ffa1f14ab0e5bc06ffa1f14ab0e5bc -> 
   custom:DOTSType/UnityEditor.OcclusionCullingWindow: b3fa360b2548ba22b3fa360b2548ba22 -> 
   custom:DOTSType/UnityEditor.ShaderGraph.ShaderGraphImporterEditor: f1d0b3182054f6c3f1d0b3182054f6c3 -> 
+  custom:ProjectSettings/EntitiesClientSettings.asset: 57fa4463d8597ee36c3803b5983b6213 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnJointBreak2DMessageListener: a8b76952c6d9c48aa8b76952c6d9c48a -> 
   custom:DOTSType/UnityEngine.InputSystem.UI.VirtualMouseInput: 4ba7c830e3fd5e2f4ba7c830e3fd5e2f -> 
   custom:DOTSType/UnityEditor.VFX.Operator.Epsilon: 242901fdd64670d2242901fdd64670d2 -> 
@@ -3840,7 +3850,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Entities.StaticOptimizeEntity: 9142fb64fcaeae3d9142fb64fcaeae3d -> 
   custom:DOTSType/UnityEngine.VFX.Utility.VFXTriggerEventBinder: 9eae5ee9143e96849eae5ee9143e9684 -> 
   custom:DOTSType/UnityEditor.EventSystems.Physics2DRaycasterEditor: 8331edda7b8106578331edda7b810657 -> 
-  custom:scripting/monoscript/fileName/SplineSampler.cs: 2089363b4d6038de2f227c5ad99fc408 -> 2269cb021987fec9fb2d54eebb45587b
+  custom:scripting/monoscript/fileName/SplineSampler.cs: f62f30899d459372cbf09ea9f450ecb5 -> 0ae9e7caff187a7dc3391e3b07d84ea7
   custom:DOTSType/Unity.Entities.SectionMetadataSetup: 75ea136fdb0e54ba75ea136fdb0e54ba -> 
   custom:DOTSType/TurretSO: 5f354a89a982e3365f354a89a982e336 -> 
   custom:DOTSType/UnityEditor.AssetImporters.ScriptedImporterEditor: aedcd91b5eaa55f5aedcd91b5eaa55f5 -> 
@@ -3855,7 +3865,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.SketchUpImportDlg: 09bc121cba9c0f2c09bc121cba9c0f2c -> 
   custom:DOTSType/UnityEngine.CubemapArray: 065f0a4a1adfba03065f0a4a1adfba03 -> 
   custom:DOTSType/UnityEditor.ShaderGraph.Drawing.Controls.GradientObject: 4a19c8f965e1e4324a19c8f965e1e432 -> 
-  custom:DOTSType/SplineSampler: cdda674d5777df94cdda674d5777df94 -> 
+  custom:DOTSType/SplineSampler: aa8cc575573010e2aa8cc575573010e2 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnMouseExitMessageListener: fa56862dfa436244fa56862dfa436244 -> 
   custom:DOTSType/UnityEngine.Timeline.GroupTrack: 9322b42a587cf1b79322b42a587cf1b7 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.ColorAdjustments: db50e5ad309928c3db50e5ad309928c3 -> 
@@ -4127,7 +4137,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/SplineComponentEditor: b3d809d03969238bb3d809d03969238b -> 
   custom:DOTSType/UnityEditor.VFX.HDRP.SixWaySmokeLit: f8873a5187ef2723f8873a5187ef2723 -> 
   custom:DOTSType/UnityEditor.VFX.VFXSpawnerConstantRate: ec10e9c2bb2c27b0ec10e9c2bb2c27b0 -> 
-  custom:scripting/monoscript/fileName/Spline Road.cs: af2d0171bfcb20b9b53e22f5a6b97bf0 -> 5006b8f7fee3f26838e57bdd91f667d7
+  custom:scripting/monoscript/fileName/Spline Road.cs: 41a5f9a267021b47cfa33b52f2e1e0ff -> c3ce4254d65e32638857b30739573304
   custom:DOTSType/UnityEngine.TestRunner.Utils.TestRunCallbackListener: 048695953c67a4e5048695953c67a4e5 -> 
   custom:DOTSType/UnityEngine.Rendering.UI.DebugUIHandlerPanel: e2bb342f24cb5f99e2bb342f24cb5f99 -> 
   custom:DOTSType/UnityEditor.UIElements.Debugger.UIElementsDebugger: 8458a1e6b0c64c188458a1e6b0c64c18 -> 
@@ -4487,64 +4497,72 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Search.ASIEI05: 443471f4b46f9067443471f4b46f9067 -> 
   custom:DOTSType/UnityEditor.VFX.HDRP.VFXHDRPSubOutput: 5665f73fd0c521065665f73fd0c52106 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 16.735423 seconds.
+  path: Assets/01-SplineDynamicMesh/Scripts/SplineSampler.cs
+  artifactKey: Guid(e6f811b718680e7478859f465dfa11aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/01-SplineDynamicMesh/Scripts/SplineSampler.cs using Guid(e6f811b718680e7478859f465dfa11aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b81b214b83b78fb390008c9cb680b16a') in 0.002237 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
 Received Prepare
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.499 seconds
-Refreshing native plugins compatible for Editor in 7.40 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.492 seconds
+Refreshing native plugins compatible for Editor in 7.48 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 313ms
+TypeManager.Initialize took: 296ms
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.116 seconds
-Domain Reload Profiling: 2610ms
-	BeginReloadAssembly (188ms)
+- Finished resetting the current domain, in  2.071 seconds
+Domain Reload Profiling: 2559ms
+	BeginReloadAssembly (183ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (79ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (230ms)
-		LoadAssemblies (278ms)
+		CreateAndSetChildDomain (76ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (229ms)
+		LoadAssemblies (270ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (19ms)
-			TypeCache.Refresh (7ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (8ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (2116ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (2072ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1119ms)
+		SetupLoadedEditorAssemblies (1107ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
+			InitializePlatformSupportModulesInManaged (5ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (119ms)
-			ProcessInitializeOnLoadAttributes (812ms)
-			ProcessInitializeOnLoadMethodAttributes (171ms)
-			AfterProcessingInitializeOnLoad (9ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (110ms)
+			ProcessInitializeOnLoadAttributes (779ms)
+			ProcessInitializeOnLoadMethodAttributes (202ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (41ms)
-Refreshing native plugins compatible for Editor in 11.95 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (38ms)
+Refreshing native plugins compatible for Editor in 9.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 8571 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 114 unused Assets / (3.8 MB). Loaded Objects now: 9373.
-Memory consumption went from 326.2 MB to 322.3 MB.
-Total: 4.907300 ms (FindLiveObjects: 0.458900 ms CreateObjectMapping: 0.308300 ms MarkObjects: 3.673800 ms  DeleteObjects: 0.465400 ms)
+Memory consumption went from 326.2 MB to 322.4 MB.
+Total: 6.205700 ms (FindLiveObjects: 0.519400 ms CreateObjectMapping: 0.364300 ms MarkObjects: 4.856200 ms  DeleteObjects: 0.464700 ms)
 
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 0 unused Assets / (0.9 MB). Loaded Objects now: 9373.
 Memory consumption went from 322.3 MB to 321.4 MB.
-Total: 5.436300 ms (FindLiveObjects: 0.485500 ms CreateObjectMapping: 0.326500 ms MarkObjects: 4.539700 ms  DeleteObjects: 0.083700 ms)
+Total: 5.698100 ms (FindLiveObjects: 0.540300 ms CreateObjectMapping: 0.397400 ms MarkObjects: 4.666200 ms  DeleteObjects: 0.093400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -5126,7 +5144,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.VFX.IncrementStripIndexOnStart: a8732119c3b0a697a8732119c3b0a697 -> 
   custom:DOTSType/UnityEditor.TerrainTools.PaintTextureTool: ffc2724e2c8f19d7ffc2724e2c8f19d7 -> 
   custom:DOTSType/UnityEditor.Rendering.DebugWindow: a085ba452d56bbc0a085ba452d56bbc0 -> 
-  custom:DOTSAllSystemsVersion: 17eb38a100707ee9fb441a378edfb7b4 -> 
+  custom:DOTSAllSystemsVersion: 0de8dfff7dd57326d26da125786f91f5 -> 
   custom:DOTSType/UnityEditor.SplitView: 1beb7074fb11369c1beb7074fb11369c -> 
   custom:DOTSType/UnityEditor.AnimEditor: b4c35bab8cb8fa80b4c35bab8cb8fa80 -> 
   custom:DOTSType/Unity.Physics.GraphicsIntegration.PhysicsGraphicalInterpolationBuffer: d0331ba26935bdfed0331ba26935bdfe -> 
@@ -5163,7 +5181,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.VFX.VFXBasicSpawnerEditor: a98b6d285d4bdf9aa98b6d285d4bdf9a -> 
   custom:DOTSType/Unity.PlasticSCM.Editor.Views.CreateWorkspace.Dialogs.RepositoryExplorerDialog: 0c94970f36d9b0a50c94970f36d9b0a5 -> 
   custom:DOTSType/UnityEditor.Timeline.BasicAssetInspector: d8fe74a1589d580dd8fe74a1589d580d -> 
-  custom:DOTSType/SplineRoad: 69a21f3bc5dc676169a21f3bc5dc6761 -> 
+  custom:DOTSType/SplineRoad: 6e806115d2b8cf8e6e806115d2b8cf8e -> 
   custom:DOTSType/UnityEngine.PhysicsUpdateBehaviour2D: bbb8b5e9970986dbbbb8b5e9970986db -> 
   custom:DOTSType/UnityEngine.TerrainData: cb45a13d30d4e8f8cb45a13d30d4e8f8 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnCancelMessageListener: af46241056da6371af46241056da6371 -> 
@@ -5360,6 +5378,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Rendering.ProbeTouchupVolumeEditor: 06ffa1f14ab0e5bc06ffa1f14ab0e5bc -> 
   custom:DOTSType/UnityEditor.OcclusionCullingWindow: b3fa360b2548ba22b3fa360b2548ba22 -> 
   custom:DOTSType/UnityEditor.ShaderGraph.ShaderGraphImporterEditor: f1d0b3182054f6c3f1d0b3182054f6c3 -> 
+  custom:ProjectSettings/EntitiesClientSettings.asset: 57fa4463d8597ee36c3803b5983b6213 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnJointBreak2DMessageListener: a8b76952c6d9c48aa8b76952c6d9c48a -> 
   custom:DOTSType/UnityEngine.InputSystem.UI.VirtualMouseInput: 4ba7c830e3fd5e2f4ba7c830e3fd5e2f -> 
   custom:DOTSType/UnityEditor.VFX.Operator.Epsilon: 242901fdd64670d2242901fdd64670d2 -> 
@@ -6029,7 +6048,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Entities.StaticOptimizeEntity: 9142fb64fcaeae3d9142fb64fcaeae3d -> 
   custom:DOTSType/UnityEngine.VFX.Utility.VFXTriggerEventBinder: 9eae5ee9143e96849eae5ee9143e9684 -> 
   custom:DOTSType/UnityEditor.EventSystems.Physics2DRaycasterEditor: 8331edda7b8106578331edda7b810657 -> 
-  custom:scripting/monoscript/fileName/SplineSampler.cs: 2089363b4d6038de2f227c5ad99fc408 -> 2269cb021987fec9fb2d54eebb45587b
+  custom:scripting/monoscript/fileName/SplineSampler.cs: f62f30899d459372cbf09ea9f450ecb5 -> 0ae9e7caff187a7dc3391e3b07d84ea7
   custom:DOTSType/Unity.Entities.SectionMetadataSetup: 75ea136fdb0e54ba75ea136fdb0e54ba -> 
   custom:DOTSType/TurretSO: 5f354a89a982e3365f354a89a982e336 -> 
   custom:DOTSType/UnityEditor.AssetImporters.ScriptedImporterEditor: aedcd91b5eaa55f5aedcd91b5eaa55f5 -> 
@@ -6044,7 +6063,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.SketchUpImportDlg: 09bc121cba9c0f2c09bc121cba9c0f2c -> 
   custom:DOTSType/UnityEngine.CubemapArray: 065f0a4a1adfba03065f0a4a1adfba03 -> 
   custom:DOTSType/UnityEditor.ShaderGraph.Drawing.Controls.GradientObject: 4a19c8f965e1e4324a19c8f965e1e432 -> 
-  custom:DOTSType/SplineSampler: cdda674d5777df94cdda674d5777df94 -> 
+  custom:DOTSType/SplineSampler: aa8cc575573010e2aa8cc575573010e2 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnMouseExitMessageListener: fa56862dfa436244fa56862dfa436244 -> 
   custom:DOTSType/UnityEngine.Timeline.GroupTrack: 9322b42a587cf1b79322b42a587cf1b7 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.ColorAdjustments: db50e5ad309928c3db50e5ad309928c3 -> 
@@ -6316,7 +6335,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/SplineComponentEditor: b3d809d03969238bb3d809d03969238b -> 
   custom:DOTSType/UnityEditor.VFX.HDRP.SixWaySmokeLit: f8873a5187ef2723f8873a5187ef2723 -> 
   custom:DOTSType/UnityEditor.VFX.VFXSpawnerConstantRate: ec10e9c2bb2c27b0ec10e9c2bb2c27b0 -> 
-  custom:scripting/monoscript/fileName/Spline Road.cs: af2d0171bfcb20b9b53e22f5a6b97bf0 -> 5006b8f7fee3f26838e57bdd91f667d7
+  custom:scripting/monoscript/fileName/Spline Road.cs: 41a5f9a267021b47cfa33b52f2e1e0ff -> c3ce4254d65e32638857b30739573304
   custom:DOTSType/UnityEngine.TestRunner.Utils.TestRunCallbackListener: 048695953c67a4e5048695953c67a4e5 -> 
   custom:DOTSType/UnityEngine.Rendering.UI.DebugUIHandlerPanel: e2bb342f24cb5f99e2bb342f24cb5f99 -> 
   custom:DOTSType/UnityEditor.UIElements.Debugger.UIElementsDebugger: 8458a1e6b0c64c188458a1e6b0c64c18 -> 
@@ -6675,8 +6694,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Rendering.HighDefinition.HDReflectionProbeEditor: 6688f143bb3ba4e96688f143bb3ba4e9 -> 
   custom:DOTSType/UnityEditor.Search.ASIEI05: 443471f4b46f9067443471f4b46f9067 -> 
   custom:DOTSType/UnityEditor.VFX.HDRP.VFXHDRPSubOutput: 5665f73fd0c521065665f73fd0c52106 -> 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0

@@ -17,6 +17,7 @@ public class SplineRoad : MonoBehaviour
     [SerializeField] private GameObject cubePrefab;
 
 	[SerializeField]
+	[Range(1f, 10)]
 	int m_StreetLightSpacing = 1;
 
     private SplineSampler m_splineSampler;
