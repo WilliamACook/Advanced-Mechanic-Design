@@ -85,6 +85,7 @@ public class TomBenBlockParser : MonoBehaviour
 
 		//TODO Create Regex for header info
 		//TODO Move Matches
+		//(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
 
 		ChangeState(ParserState.InsideBlockBody);
 	}
