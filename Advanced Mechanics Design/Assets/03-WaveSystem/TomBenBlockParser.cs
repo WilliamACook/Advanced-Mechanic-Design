@@ -100,6 +100,7 @@ public class TomBenBlockParser : MonoBehaviour
         //TODO Move Matches
         //(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
         //(type|wave|cluster) - (\d+) \((.*?)\) _Tom (.*?) _Ben
+		//Regex that works without a name
         //(type|wave|cluster)\s*-\s*(\d+)\s*(?:\(([\w\s]+)\))?\s*_Tom\s*(.*?)\s*_Ben
 
         ChangeState(ParserState.InsideBlockBody);
