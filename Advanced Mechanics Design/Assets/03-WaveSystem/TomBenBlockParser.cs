@@ -83,11 +83,12 @@ public class TomBenBlockParser : MonoBehaviour
 		if (ReachedEnd())
 			return;
 
-		//TODO Create Regex for header info
-		//TODO Move Matches
-		//(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
+        //TODO Create Regex for header info
+        //TODO Move Matches
+        //(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
+        //Correct expression (type|wave|cluster) - (\d+) \((.*?)\) _Tom (.*?) _Ben
 
-		ChangeState(ParserState.InsideBlockBody);
+        ChangeState(ParserState.InsideBlockBody);
 	}
 
 	private void ParseInsideBlock()
