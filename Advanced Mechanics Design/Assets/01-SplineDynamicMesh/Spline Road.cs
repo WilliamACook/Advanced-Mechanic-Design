@@ -73,6 +73,8 @@ public class SplineRoad : MonoBehaviour
 
     private void BuildMesh()
     {
+        BuildLights(m_vertsP1);
+        BuildLights(m_vertsP2);
         Mesh m = new Mesh();
         List<Vector3> verts = new List<Vector3>();
         List<int> tris = new List<int>();
@@ -165,8 +167,7 @@ public class SplineRoad : MonoBehaviour
             for (int i = 0; i < m_vertsP1.Count; i++)
             {
                 //Gizmos.DrawSphere(m_vertsP1[i], 1f);
-				BuildLights(m_vertsP1);
-				BuildLights(m_vertsP2);
+				
                 Handles.SphereHandleCap(0, m_vertsP1[i] , quaternion.identity, 1f, EventType.Repaint);
                 Handles.SphereHandleCap(0, m_vertsP2[i], quaternion.identity, 1f, EventType.Repaint);
                 //Gizmos.DrawSphere(m_vertsP2[i], 1f);
