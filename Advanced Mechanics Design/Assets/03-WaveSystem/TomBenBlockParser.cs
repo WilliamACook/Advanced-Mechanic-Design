@@ -77,18 +77,25 @@ public class TomBenBlockParser : MonoBehaviour
 
 	private void ParseInsideBlockHeader()
 	{
-		while (!BufferHasAny("basic", "easy", "first") && !ReachedEnd())
+		while (!BufferHas("_Tom") && !ReachedEnd())
 			NextChar();
 
 		if (ReachedEnd())
 			return;
 
-		currentBlock.name = GetLastMatchedBlockType();
+		//TODO Create Regex for header info
+		//TODO Move Matches
+
+		ChangeState(ParserState.InsideBlockBody);
 	}
 
 	private void ParseInsideBlock()
 	{
-		
+		while (!BufferHas("_Ben") && !ReachedEnd())
+			NextChar();
+
+		if(ReachedEnd())
+			return;
 	}
 
 	private void ParseOutsideBlock()
