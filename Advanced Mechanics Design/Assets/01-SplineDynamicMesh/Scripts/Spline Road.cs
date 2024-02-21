@@ -61,15 +61,6 @@ public class SplineRoad : MonoBehaviour
 			m_vertsP1.Add(p1);
 			m_vertsP2.Add(p2);
 		}
-
-
-		//for (int i = 0; i < resolution; i++)
-		//{
-		//    float t = step * i;
-		//    m_splineSampler.SampleSplineWidth(t, out Vector3 p1, out Vector3 p2);
-		//    m_vertsP1.Add(p1);
-		//    m_vertsP2.Add(p2);
-		//}
 	}
 
     private void BuildMesh()
@@ -84,44 +75,6 @@ public class SplineRoad : MonoBehaviour
 
         int length = m_vertsP2.Count;
         float uvOffset = 0f;
-
-		//for (int i = 1; i <= length; i++)
-		//{
-		//	Vector3 p1 = m_vertsP1[i - 1];
-		//	Vector3 p2 = m_vertsP2[i - 1];
-		//	Vector3 p3;
-		//	Vector3 p4;
-
-		//	if (i == length)
-		//	{
-		//		p3 = m_vertsP1[0];
-		//		p4 = m_vertsP2[0];
-		//	}
-		//	else
-		//	{
-		//		p3 = m_vertsP1[i];
-		//		p4 = m_vertsP2[i];
-		//	}
-
-		//	offset = 4 * (i - 1);
-
-		//	int t1 = offset + 0;
-		//	int t2 = offset + 2;
-		//	int t3 = offset + 3;
-
-		//	int t4 = offset + 3;
-		//	int t5 = offset + 1;
-		//	int t6 = offset + 0;
-
-		//	verts.AddRange(new List<Vector3> { p1, p2, p3, p4 });
-		//	tris.AddRange(new List<int> { t1, t2, t3, t4, t5, t6 });
-
-		//	float distance = Vector3.Distance(p1, p2) / 4f;
-		//	float uvDistance = uvOffset + distance;
-		//	uvs.AddRange(new List<Vector2> { new Vector2(uvOffset, 0), new Vector2(uvOffset, 1), new Vector2(uvDistance, 0), new Vector2(uvDistance, 1) });
-
-		//	uvOffset += distance;
-		//}
 
 		for (int currentSplineIndex = 0; currentSplineIndex < m_splineSampler.NumSplines; currentSplineIndex++)
 		{
@@ -183,6 +136,7 @@ public class SplineRoad : MonoBehaviour
 	{
 		if(points != null)
 		{
+			// Destroy Lights and clear list on method called
 			foreach(GameObject light in m_StreetLights)
 			{
 				Destroy(light);

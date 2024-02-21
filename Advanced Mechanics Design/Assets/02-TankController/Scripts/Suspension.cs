@@ -15,7 +15,7 @@ public class Suspension : MonoBehaviour
 	[SerializeField] float damping;
 
 	private SuspensionSO m_Data;
-	private float m_SpringSize = 0.5f;
+	private float m_SpringSize = 1.5f;
 	private bool m_Grounded;
 
 	public void Init(SuspensionSO inData)
@@ -47,19 +47,24 @@ public class Suspension : MonoBehaviour
 	{
 		Vector3 direction = Vector3.down;
 		Vector3 localDir = transform.TransformDirection(direction);
-		GetGrounded();
-
-		Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
+		bool grounded = GetGrounded();
 
 		Vector3 springVec = transform.position - transform.parent.position;
-
 		float susOffset = m_SpringSize - Vector3.Dot(springVec, localDir);
 
-		float susVel = Vector3.Dot(localDir, worldVec);
+		m_Wheel.localPosition = Vector3.up * (m_SpringSize - susOffset);
+
+		if (grounded)
+		{
+			Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
+			float susVel = Vector3.Dot(localDir, worldVec);
+			float susForce = (susOffset * stiffness) - (susVel * damping);
+			m_RB.AddForce(localDir * (susForce / m_RB.mass));
+
+		}
+
 
 		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
-		float susForce = (susOffset * stiffness) - (susVel * damping);
 
-		m_RB.AddForce(localDir * (susForce / m_RB.mass));
 	}
 }
