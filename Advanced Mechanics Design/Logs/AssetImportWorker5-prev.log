@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.16f1 (d2c21f0ef2f1) revision 13812255'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 32605 MB
+OS: 'Windows 10  (10.0.19045) 64bit Enterprise' Language: 'en' Physical Memory: 32512 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -9,15 +9,15 @@ C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker2
+AssetImportWorker5
 -projectPath
-C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
+C:/Users/c010703m/Documents/GitHub/AMD/Advanced Mechanics Design
 -logFile
-Logs/AssetImportWorker2.log
+Logs/AssetImportWorker5.log
 -srvPort
-50583
-Successfully changed project path to: C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
-C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
+60225
+Successfully changed project path to: C:/Users/c010703m/Documents/GitHub/AMD/Advanced Mechanics Design
+C:/Users/c010703m/Documents/GitHub/AMD/Advanced Mechanics Design
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,65 +49,70 @@ C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [13356] Host "[IP] 192.168.1.189 [Port] 0 [Flags] 2 [Guid] 589493667 [EditorId] 589493667 [Version] 1048832 [Id] WindowsEditor(7,Williams-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [6760] Host "[IP] 10.6.118.11 [Port] 0 [Flags] 2 [Guid] 2724059686 [EditorId] 2724059686 [Version] 1048832 [Id] WindowsEditor(7,C115-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [13356] Host "[IP] 192.168.1.189 [Port] 0 [Flags] 2 [Guid] 589493667 [EditorId] 589493667 [Version] 1048832 [Id] WindowsEditor(7,Williams-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [6760] Host "[IP] 10.6.118.11 [Port] 0 [Flags] 2 [Guid] 2724059686 [EditorId] 2724059686 [Version] 1048832 [Id] WindowsEditor(7,C115-08) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 23.16 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 17.03 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.16f1 (d2c21f0ef2f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/willi/Documents/GitHub/AMD/Advanced Mechanics Design/Assets
+[Subsystems] Discovering subsystems at path C:/Users/c010703m/Documents/GitHub/AMD/Advanced Mechanics Design/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2488)
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2206)
     Vendor:   NVIDIA
-    VRAM:     8032 MB
-    Driver:   31.0.15.4584
+    VRAM:     10067 MB
+    Driver:   31.0.15.3770
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56504
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004884 seconds.
-- Loaded All Assemblies, in  0.249 seconds
+Registered in 0.008223 seconds.
+- Loaded All Assemblies, in  0.267 seconds
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 165 ms
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.204 seconds
-Domain Reload Profiling: 452ms
-	BeginReloadAssembly (73ms)
+- Finished resetting the current domain, in  0.409 seconds
+Domain Reload Profiling: 675ms
+	BeginReloadAssembly (71ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (96ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (112ms)
 		LoadAssemblies (71ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (95ms)
-			TypeCache.Refresh (94ms)
-				TypeCache.ScanAssembly (85ms)
+		AnalyzeDomain (110ms)
+			TypeCache.Refresh (108ms)
+				TypeCache.ScanAssembly (99ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (205ms)
+	FinalizeReload (409ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (161ms)
+		SetupLoadedEditorAssemblies (368ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (253ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (113ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (82ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,56 +123,58 @@ Worker process is ready to serve import requests
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.680 seconds
-Refreshing native plugins compatible for Editor in 6.47 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 5.66 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-TypeManager.Initialize took: 236ms
+TypeManager.Initialize took: 252ms
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.115 seconds
-Domain Reload Profiling: 1789ms
-	BeginReloadAssembly (98ms)
+- Finished resetting the current domain, in  1.177 seconds
+Domain Reload Profiling: 1854ms
+	BeginReloadAssembly (110ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (14ms)
+		CreateAndSetChildDomain (17ms)
 	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (8ms)
 	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (512ms)
-		LoadAssemblies (251ms)
+	LoadAllAssembliesAndSetupDomain (503ms)
+		LoadAssemblies (275ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (316ms)
-			TypeCache.Refresh (277ms)
-				TypeCache.ScanAssembly (208ms)
-			ScanForSourceGeneratedMonoScriptInfo (30ms)
+		AnalyzeDomain (284ms)
+			TypeCache.Refresh (247ms)
+				TypeCache.ScanAssembly (230ms)
+			ScanForSourceGeneratedMonoScriptInfo (27ms)
 			ResolveRequiredComponents (8ms)
-	FinalizeReload (1115ms)
+	FinalizeReload (1177ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (982ms)
+		SetupLoadedEditorAssemblies (1025ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
+			InitializePlatformSupportModulesInManaged (18ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (80ms)
-			ProcessInitializeOnLoadAttributes (635ms)
-			ProcessInitializeOnLoadMethodAttributes (255ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (650ms)
+			ProcessInitializeOnLoadMethodAttributes (272ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 6.56 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (3ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 6.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 8921 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 164 unused Assets / (3.9 MB). Loaded Objects now: 9369.
-Memory consumption went from 367.6 MB to 363.7 MB.
-Total: 5.813300 ms (FindLiveObjects: 0.425700 ms CreateObjectMapping: 0.254900 ms MarkObjects: 4.490100 ms  DeleteObjects: 0.641500 ms)
+Unloading 8922 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 164 unused Assets / (3.9 MB). Loaded Objects now: 9368.
+Memory consumption went from 371.9 MB to 368.0 MB.
+Total: 5.841800 ms (FindLiveObjects: 0.497400 ms CreateObjectMapping: 0.291500 ms MarkObjects: 4.556700 ms  DeleteObjects: 0.495300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:DOTSType/UnityEditor.Snap.SnapSettingsWindow: 5fb792d44d0bbc465fb792d44d0bbc46 -> 
@@ -198,10 +205,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.VFX.Operator.BufferCount: 474ae016e30a196b474ae016e30a196b -> 
   custom:DOTSType/UnityEngine.UIElements.VectorImage: b1dd1246a3d66849b1dd1246a3d66849 -> 
   custom:DOTSType/TimelineProjectSettings: ea1b2fa50ced1d61ea1b2fa50ced1d61 -> 
-  custom:DOTSType/UnityEditor.TrailRendererInspector: 3e5dae9f7cc3db3a3e5dae9f7cc3db3a -> 
   custom:DOTSType/UnityEditor.Experimental.GraphView.SearchWindow: 9b0dbaf51aa1d15b9b0dbaf51aa1d15b -> 
-  custom:DOTSType/UnityEditor.VideoClipImporterInspector: a08105a82e5be0cea08105a82e5be0ce -> 
+  custom:DOTSType/UnityEditor.TrailRendererInspector: 3e5dae9f7cc3db3a3e5dae9f7cc3db3a -> 
   custom:DOTSType/UnityEditor.BumpMapSettingsFixingWindow: 9230b7ca1f8879099230b7ca1f887909 -> 
+  custom:DOTSType/UnityEditor.VideoClipImporterInspector: a08105a82e5be0cea08105a82e5be0ce -> 
   custom:DOTSType/UnityEditor.VFX.VFXLineOutput: 9f70da03b42537609f70da03b4253760 -> 
   custom:DOTSType/UnityEngine.Motion: 85649fed401bf36885649fed401bf368 -> 
   custom:DOTSType/UnityEditor.VFX.VFXInlineOperator: ff12948a29c66067ff12948a29c66067 -> 
@@ -215,8 +222,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.CollisionModuleUI+CollisionModuleTransformTool: 0451e14b65fe435a0451e14b65fe435a -> 
   custom:DOTSType/Unity.PlasticSCM.Editor.Configuration.CloudEdition.Welcome.CloudEditionWelcomeWindow: cd85a4ad49ca38fccd85a4ad49ca38fc -> 
   custom:DOTSType/UnityEditor.VFX.Block.Drag: 53b787601d788ff253b787601d788ff2 -> 
-  custom:DOTSType/UnityEditor.DistanceJoint2DEditor: bc82ff4f96462bf1bc82ff4f96462bf1 -> 
   custom:DOTSType/UnityEditor.ColorPicker: a70a917f242879daa70a917f242879da -> 
+  custom:DOTSType/UnityEditor.DistanceJoint2DEditor: bc82ff4f96462bf1bc82ff4f96462bf1 -> 
   custom:DOTSType/Unity.Entities.DefaultWorldInitializationProxy: b6c225ee16c9ceb4b6c225ee16c9ceb4 -> 
   custom:DOTSType/UnityEngine.InputSystem.Editor.InputActionImporter: 0e4170e0a796eb9a0e4170e0a796eb9a -> 
   custom:DOTSType/UnityEditor.VFX.Operator.CurlNoise: 00300177abdc8ed000300177abdc8ed0 -> 
@@ -286,9 +293,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.VisualScripting.UnityOnControllerColliderHitMessageListener: 5085743652e01b005085743652e01b00 -> 
   custom:DOTSType/UnityEditor.VFX.Operator.ViewportToWorldPoint: 754ac6402dd2707b754ac6402dd2707b -> 
   custom:DOTSType/UnityEngine.Joint2D: b80188861a0bffd2b80188861a0bffd2 -> 
-  custom:DOTSType/UnityEditor.Graphs.AnimationStateMachine.ExitNodeInspector: 8aab2e75636d5ffa8aab2e75636d5ffa -> 
-  custom:DOTSType/Unity.VisualScripting.EditorPreferencesProvider: 4c5bb6229cb42c564c5bb6229cb42c56 -> 
   custom:DOTSType/UnityEditor.GUIViewDebuggerWindow: 4761b59d86c2068e4761b59d86c2068e -> 
+  custom:DOTSType/Unity.VisualScripting.EditorPreferencesProvider: 4c5bb6229cb42c564c5bb6229cb42c56 -> 
+  custom:DOTSType/UnityEditor.Graphs.AnimationStateMachine.ExitNodeInspector: 8aab2e75636d5ffa8aab2e75636d5ffa -> 
   custom:DOTSType/Unity.Physics.Authoring.DisplayGizmoColliderEdges+DrawWithGizmos: 598214bc27e12cce598214bc27e12cce -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnCollisionStayMessageListener: 8273592d434d4b7b8273592d434d4b7b -> 
   custom:DOTSType/UnityEditor.Graphs.AnimationStateMachine.StateEditor: 6d9f0335d5ec5b406d9f0335d5ec5b40 -> 
@@ -383,9 +390,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.TerrainTools.SetHeightTool: f7a6c658cca53012f7a6c658cca53012 -> 
   custom:DOTSType/UnityEditor.CapsuleCollider2DTool: 6177a333d05bf1536177a333d05bf153 -> 
   custom:DOTSType/UnityEngine.Rendering.UI.DebugUIHandlerObject: df5cd3526bd9ede6df5cd3526bd9ede6 -> 
-  custom:DOTSType/UnityEditor.DoubleCurvePresetLibraryEditor: 4df1a8e614a44a724df1a8e614a44a72 -> 
-  custom:DOTSType/UnityEditor.SketchUpImporterEditor: 7e8120c557e674d87e8120c557e674d8 -> 
   custom:DOTSType/UnityEditor.ProjectTemplateWindow: 45d9c3ec63f0578a45d9c3ec63f0578a -> 
+  custom:DOTSType/UnityEditor.SketchUpImporterEditor: 7e8120c557e674d87e8120c557e674d8 -> 
+  custom:DOTSType/UnityEditor.DoubleCurvePresetLibraryEditor: 4df1a8e614a44a724df1a8e614a44a72 -> 
   custom:DOTSType/UnityEditor.VFX.VFXSpawnerBurstOld: bfd3cd7623b4fd75bfd3cd7623b4fd75 -> 
   custom:DOTSType/UnityEditor.Timeline.Signals.SignalAssetInspector: 372a63fa40f6cdff372a63fa40f6cdff -> 
   custom:DOTSType/UnityEditor.Rendering.ProbeVolumeAssetEditor: 2e49bf66a1aa98232e49bf66a1aa9823 -> 
@@ -496,8 +503,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.InputSystem.InputSystemObject: 61c17ca7acfaff3261c17ca7acfaff32 -> 
   custom:DOTSType/UnityEngine.AudioListener: ebb57dd91e52e0b6ebb57dd91e52e0b6 -> 
   custom:DOTSType/UnityEngine.Rendering.UI.DebugUIHandlerIndirectFloatField: f8e7fa1eee66b92ff8e7fa1eee66b92f -> 
-  custom:DOTSType/UnityEditor.Editor: ed1bf5016a3864f0ed1bf5016a3864f0 -> 
   custom:DOTSType/UnityEditor.VFX.UI.VFXViewWindow: d93cb2062123c4a1d93cb2062123c4a1 -> 
+  custom:DOTSType/UnityEditor.Editor: ed1bf5016a3864f0ed1bf5016a3864f0 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.HDRenderPipelineRayTracingResources: 81d501c09056221381d501c090562213 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.ChromaticAberration: 459871562ef4ef59459871562ef4ef59 -> 
   custom:DOTSType/UnityEditor.Physics2DSettings: 229650b07258979c229650b07258979c -> 
@@ -727,8 +734,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.Audio.AudioMixerGroup: a931749f9bc2070da931749f9bc2070d -> 
   custom:DOTSType/UnityEditor.UI.DropdownEditor: 7fa3cca1fa9533ed7fa3cca1fa9533ed -> 
   custom:DOTSType/UnityEditor.TextCore.Text.TextSettingsEditor: cce0678f2b169877cce0678f2b169877 -> 
-  custom:DOTSType/EnemyAuthoring: 0fb117995b6e02260fb117995b6e0226 -> 
   custom:DOTSType/UnityEngine.PhysicsMaterial2D: 9e31b5feaa38c22b9e31b5feaa38c22b -> 
+  custom:DOTSType/EnemyAuthoring: 0fb117995b6e02260fb117995b6e0226 -> 
   custom:DOTSType/UnityEditor.NavMeshAgentInspector: 3200be8b2ab525373200be8b2ab52537 -> 
   custom:DOTSType/UnityEditor.VersionControlSettingsProvider: 7502cf0c6bfbbe257502cf0c6bfbbe25 -> 
   custom:DOTSType/UnityEditor.VFX.Block.CollisionSphereDeprecated: 0569966ae0211cb70569966ae0211cb7 -> 
@@ -748,7 +755,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.VFX.IncrementStripIndexOnStart: a8732119c3b0a697a8732119c3b0a697 -> 
   custom:DOTSType/UnityEditor.TerrainTools.PaintTextureTool: ffc2724e2c8f19d7ffc2724e2c8f19d7 -> 
   custom:DOTSType/UnityEditor.Rendering.DebugWindow: a085ba452d56bbc0a085ba452d56bbc0 -> 
-  custom:DOTSAllSystemsVersion: 0de8dfff7dd57326d26da125786f91f5 -> 
+  custom:DOTSAllSystemsVersion: f4e612163c23b06584d1234b1b67c5f0 -> 
   custom:DOTSType/UnityEditor.SplitView: 1beb7074fb11369c1beb7074fb11369c -> 
   custom:DOTSType/UnityEditor.AnimEditor: b4c35bab8cb8fa80b4c35bab8cb8fa80 -> 
   custom:DOTSType/Unity.Physics.GraphicsIntegration.PhysicsGraphicalInterpolationBuffer: d0331ba26935bdfed0331ba26935bdfe -> 
@@ -766,10 +773,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.TestTools.TestRunner.CommandLineTest.RunData: 2c7f713021db41872c7f713021db4187 -> 
   custom:DOTSType/UnityEditor.VFX.Block.AttributeMassFromVolume: b5df19ab92fee973b5df19ab92fee973 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.DensityVolume: 50efb29ce438507c50efb29ce438507c -> 
+  custom:DOTSType/UnityEditor.Android.TargetScanWorker+PersistentData: fcf0d9cd2d490d5afcf0d9cd2d490d5a -> 
   custom:DOTSType/TMPro.TextMeshPro: 72d7af429cdb069772d7af429cdb0697 -> 
   custom:DOTSType/UnityEditor.AnimatorInspector: b2c478800d004e2ab2c478800d004e2a -> 
   custom:DOTSType/UnityEditor.TooltipView: 52a81c7e9535f53252a81c7e9535f532 -> 
   custom:DOTSType/UnityEditor.View: 79bb3baf2f88d74e79bb3baf2f88d74e -> 
+  custom:DOTSType/UnityEditor.WebGL.WebsockifyEditorWrapper: 8d1a99c22a2f3a748d1a99c22a2f3a74 -> 
   custom:DOTSType/Unity.Rendering.RootLODRange: 7927be3e9718af827927be3e9718af82 -> 
   custom:DOTSType/UnityEditor.VFX.VisualEffectResource: 9717ffd0ca404f729717ffd0ca404f72 -> 
   custom:DOTSType/UnityEngine.RelativeJoint2D: 2cd545de6f8427372cd545de6f842737 -> 
@@ -853,6 +862,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.RotationConstraintEditor: 1a70c8865cb36e981a70c8865cb36e98 -> 
   custom:DOTSType/TMPro.TextContainer: bd2d75cb9b7279a9bd2d75cb9b7279a9 -> 
   custom:DOTSType/Unity.Physics.PhysicsCustomTags: 7d9dddf48b181c997d9dddf48b181c99 -> 
+  custom:DOTSType/UnityEditor.Android.AndroidBuildProperties: 39c7fbd57389b31439c7fbd57389b314 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.PhysicallyBasedSky: f883b9b504f51a83f883b9b504f51a83 -> 
   custom:DOTSType/UnityEditor.VFX.Block.KillSphere: 86e289f5b953c88986e289f5b953c889 -> 
   custom:DOTSType/UnityEditor.VFX.Operator.ConeVolume: ab652522bb907df7ab652522bb907df7 -> 
@@ -898,6 +908,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.FrameDebuggerWindow: 1a6503921a7b5f091a6503921a7b5f09 -> 
   custom:DOTSType/UnityEditor.TerrainTools.CreateTerrainTool: 91ff513ce2598e9f91ff513ce2598e9f -> 
   custom:DOTSType/Unity.Rendering.BuiltinMaterialPropertyUnity_SHCoefficientsAuthoring: aa743d57c25bd597aa743d57c25bd597 -> 
+  custom:DOTSType/UnityEditor.Android.AndroidKeystoreWindow: 943a3fb8a4f8cdd3943a3fb8a4f8cdd3 -> 
   custom:DOTSType/Unity.Rendering.HDRPMaterialPropertySmoothnessRemapMax: 17ea604ec0a34c3017ea604ec0a34c30 -> 
   custom:DOTSType/UnityEditor.Build.Reporting.PackedAssets: 5f33ea080a6365535f33ea080a636553 -> 
   custom:DOTSType/UnityEditor.AudioDistortionFilterEditor: d6d7a9b828f1a039d6d7a9b828f1a039 -> 
@@ -955,6 +966,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.VFX.Block.Age: de606ef406e3c58dde606ef406e3c58d -> 
   custom:DOTSType/UnityEditor.SceneManagement.PrefabStage: 6f1ced8abe48a2ba6f1ced8abe48a2ba -> 
   custom:DOTSType/UnityEditor.UI.GridLayoutGroupEditor: 35af39c053b0719b35af39c053b0719b -> 
+  custom:DOTSType/UnityEditor.Android.AndroidEnterIPWindow: 83d1195c2c53ad0883d1195c2c53ad08 -> 
   custom:DOTSType/UnityEditor.AvatarMuscleEditor: 55270bc991cf485f55270bc991cf485f -> 
   custom:DOTSType/UnityEditor.TextCore.Text.TextCoreContextMenuItems: c71e57ba3972b83dc71e57ba3972b83d -> 
   custom:DOTSType/UnityEditor.UI.ImageEditor: 03756e7a59ad5db603756e7a59ad5db6 -> 
@@ -982,7 +994,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Rendering.ProbeTouchupVolumeEditor: 06ffa1f14ab0e5bc06ffa1f14ab0e5bc -> 
   custom:DOTSType/UnityEditor.OcclusionCullingWindow: b3fa360b2548ba22b3fa360b2548ba22 -> 
   custom:DOTSType/UnityEditor.ShaderGraph.ShaderGraphImporterEditor: f1d0b3182054f6c3f1d0b3182054f6c3 -> 
-  custom:ProjectSettings/EntitiesClientSettings.asset: 57fa4463d8597ee36c3803b5983b6213 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnJointBreak2DMessageListener: a8b76952c6d9c48aa8b76952c6d9c48a -> 
   custom:DOTSType/UnityEngine.InputSystem.UI.VirtualMouseInput: 4ba7c830e3fd5e2f4ba7c830e3fd5e2f -> 
   custom:DOTSType/UnityEditor.VFX.Operator.Epsilon: 242901fdd64670d2242901fdd64670d2 -> 
@@ -996,6 +1007,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.UI.Mask: bdff8db4d27dccc5bdff8db4d27dccc5 -> 
   custom:DOTSType/UnityEditor.AssetStoreWindow: 774325209e1dd0c0774325209e1dd0c0 -> 
   custom:DOTSType/UnityEditor.VFX.Operator.CircleAreaDeprecated: 66a4f2d9496b3e2866a4f2d9496b3e28 -> 
+  custom:DOTSType/UnityEditor.WebGL.HttpServerEditorWrapper: 7cc27dd98f8c9b567cc27dd98f8c9b56 -> 
   custom:DOTSType/UnityEditor.ShaderImporterInspector: 8a2c4f262f5f676e8a2c4f262f5f676e -> 
   custom:DOTSType/UnityEditor.VersionControl.WindowChange: f3bb77867fcdabeaf3bb77867fcdabea -> 
   custom:DOTSType/Unity.Rendering.Occlusion.OcclusionView: 8e9d76cb2f4ccf378e9d76cb2f4ccf37 -> 
@@ -1130,12 +1142,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Rendering.HDRPMaterialPropertyUnlitColor: c2780b7eda0b3bebc2780b7eda0b3beb -> 
   custom:DOTSType/UnityEditor.Animations.AnimatorController: 6429cc47dfbeb7696429cc47dfbeb769 -> 
   custom:DOTSType/Unity.Rendering.MaterialColor: ab3c1bf2ccdce945ab3c1bf2ccdce945 -> 
-  custom:DOTSType/UnityEditor.CanvasRendererEditor: 260dc671783a5059260dc671783a5059 -> 
   custom:DOTSType/UnityEditor.SaveWindowLayout: 63d49c9243e11c3563d49c9243e11c35 -> 
   custom:DOTSType/UnityEditor.GameViewSizes: 7185b15799c076f47185b15799c076f4 -> 
+  custom:DOTSType/UnityEditor.CanvasRendererEditor: 260dc671783a5059260dc671783a5059 -> 
   custom:DOTSType/Unity.PlasticSCM.Editor.Views.Branches.Dialogs.RenameBranchDialog: 8cf99c31abbeb9ee8cf99c31abbeb9ee -> 
-  custom:DOTSType/UnityEditor.VFX.VFXSlotGraphicsBuffer: 0f032992d74890860f032992d7489086 -> 
   custom:DOTSType/UnityEditor.VFX.Operator.BitwiseAnd: 0eeb04b2f809c7970eeb04b2f809c797 -> 
+  custom:DOTSType/UnityEditor.VFX.VFXSlotGraphicsBuffer: 0f032992d74890860f032992d7489086 -> 
   custom:DOTSType/Unity.Entities.BeginFixedStepSimulationEntityCommandBufferSystem+Singleton: 0ed126333a657e790ed126333a657e79 -> 
   custom:DOTSType/UnityEditor.Rendering.HighDefinition.WaterSurfaceEditor: 7d3d5de78a8556727d3d5de78a855672 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.Fog: faee2abd64d0a323faee2abd64d0a323 -> 
@@ -1286,6 +1298,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.VisualScripting.UnityOnDropMessageListener: f21edb654e3241a8f21edb654e3241a8 -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.IndirectLightingController: 5050065ac51671985050065ac5167198 -> 
   custom:DOTSType/UnityEditor.AvatarPreview+ObjectSelectorOperation: 30ec515a767e899230ec515a767e8992 -> 
+  custom:DOTSType/UnityEditor.WebGL.WebGLStrippingInfo: 56a15a70d7b018d356a15a70d7b018d3 -> 
   custom:DOTSType/Unity.Rendering.Occlusion.Occluder: 610bff557e896896610bff557e896896 -> 
   custom:DOTSType/UnityEditor.ProjectWindowCallback.DoCreatePrefab: d382d6fbbed28cecd382d6fbbed28cec -> 
   custom:DOTSType/UnityEditor.Animations.AnimatorState: 0ddc05284a05d1420ddc05284a05d142 -> 
@@ -1329,7 +1342,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Transforms.Child: fa2a6d9face5ba93fa2a6d9face5ba93 -> 
   custom:DOTSType/UnityEditor.Rendering.HighDefinition.CloudLayerEditor: f316f788f101becff316f788f101becf -> 
   custom:DOTSType/Unity.Entities.Editor.ComponentWrapperEditor: 268d9231e0fba965268d9231e0fba965 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
   custom:DOTSType/UnityEditor.VFX.Operator.Remap: 0f993595a5857b280f993595a5857b28 -> 
   custom:DOTSType/UnityEditor.Licensing.UI.Events.Windows.LicenseOfflineValidityEndingWindow: e170212007c57345e170212007c57345 -> 
   custom:DOTSType/UnityEditor.PlayerSettingsEditor: ebeb6452f91d24a0ebeb6452f91d24a0 -> 
@@ -1407,9 +1420,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.VFX.Block.AngularEulerIntegration: 2a698ba06b0eeb492a698ba06b0eeb49 -> 
   custom:DOTSType/UnityEditor.PackageManager.UI.Internal.PackageSelectionObject: f7f34fddcaec1949f7f34fddcaec1949 -> 
   custom:DOTSType/UnityEngine.VFX.Utility.VFXPropertyBinder: 6be654aa07435ba76be654aa07435ba7 -> 
+  custom:DOTSType/Unity.Entities.Simulate: e0c92315ec24632de0c92315ec24632d -> 
   custom:DOTSType/UnityEngine.Rigidbody2D: 9d6c0155946d7ee39d6c0155946d7ee3 -> 
   custom:DOTSType/UnityEditor.VFX.VFXBuiltInParameter: bcd3aeaadbdfb350bcd3aeaadbdfb350 -> 
-  custom:DOTSType/Unity.Entities.Simulate: e0c92315ec24632de0c92315ec24632d -> 
   custom:DOTSType/UnityEditor.VFX.VFXBasicSpawner: 8629778f2ac254818629778f2ac25481 -> 
   custom:DOTSType/Unity.UI.Builder.UIExtensionsTestWindow: 206270a9fa309439206270a9fa309439 -> 
   custom:DOTSType/UnityEditorInternal.PackageManifestImporter: c0e8a523725dec5bc0e8a523725dec5b -> 
@@ -1474,8 +1487,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.LineRendererInspector+LineRendererEditPointsTool: f49a62e58129ce74f49a62e58129ce74 -> 
   custom:DOTSType/UnityEditorInternal.Profiling.ProfilerFrameDataViewBase+SelectedSampleStackWindow: 408be806a7c4b95a408be806a7c4b95a -> 
   custom:DOTSType/UnityEngine.Timeline.AudioTrack: 285cd5f180b34112285cd5f180b34112 -> 
-  custom:DOTSType/Unity.Rendering.HDRPMaterialPropertySmoothnessAuthoring: fb6277623a6dcf61fb6277623a6dcf61 -> 
   custom:DOTSType/UnityEngine.Tilemaps.Tile: 0814389884c01fc90814389884c01fc9 -> 
+  custom:DOTSType/Unity.Rendering.HDRPMaterialPropertySmoothnessAuthoring: fb6277623a6dcf61fb6277623a6dcf61 -> 
   custom:DOTSType/UnityEngine.Rendering.DebugUpdater: 6786bfd260367a856786bfd260367a85 -> 
   custom:DOTSType/Unity.Physics.DummyColliderFakesComponent`1[[Unity.Physics.CapsuleCollider, Unity.Physics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]: 840aede77f375b4f840aede77f375b4f -> 
   custom:DOTSType/UnityEditor.CharacterControllerEditor: 6e0ef7c2314a6a496e0ef7c2314a6a49 -> 
@@ -1568,11 +1581,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.InputSystem.Editor.InputActionDrawerBase+PropertiesViewPopup: 2a0a83a15909c57f2a0a83a15909c57f -> 
   custom:DOTSType/UnityEditor.VFX.UI.VFXAttachPanel: b5c8a0e6a8651e7cb5c8a0e6a8651e7c -> 
   custom:DOTSType/UnityEngine.Camera: 05394a3ae19adf4305394a3ae19adf43 -> 
-  custom:DOTSType/UnityEngine.VFX.Utility.VFXEnabledBinder: 9d6a2a2de9f93dfd9d6a2a2de9f93dfd -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnInputFieldValueChangedMessageListener: 0e850322c46e2ffa0e850322c46e2ffa -> 
   custom:DOTSType/UnityEditor.VFX.Block.PositionLine: 2a4d345fe051df972a4d345fe051df97 -> 
   custom:DOTSType/UnityEditor.AvatarMaskInspector: 9866127dd3f3402c9866127dd3f3402c -> 
   custom:DOTSType/UnityEngine.InputSystem.Editor.InputActionAssetEditor: 7789ffe1357b686c7789ffe1357b686c -> 
+  custom:DOTSType/UnityEngine.VFX.Utility.VFXEnabledBinder: 9d6a2a2de9f93dfd9d6a2a2de9f93dfd -> 
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.Compositor.AlphaInjection: ae68041af49b30e5ae68041af49b30e5 -> 
   custom:DOTSType/UnityEditor.TerrainColliderEditor: 6210a698fc2301946210a698fc230194 -> 
   custom:DOTSType/Unity.Rendering.FrozenRenderSceneTag: cb3c396f39158777cb3c396f39158777 -> 
@@ -1650,8 +1663,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/Unity.Entities.WorldTimeQueue: e9cbb96adca0937ee9cbb96adca0937e -> 
   custom:DOTSType/UnityEditor.VFX.Operator.CylinderVolumeDeprecated: 07e4fc6eb8c54aac07e4fc6eb8c54aac -> 
   custom:DOTSType/Unity.Entities.StaticOptimizeEntity: 9142fb64fcaeae3d9142fb64fcaeae3d -> 
-  custom:DOTSType/UnityEngine.VFX.Utility.VFXTriggerEventBinder: 9eae5ee9143e96849eae5ee9143e9684 -> 
   custom:DOTSType/UnityEditor.EventSystems.Physics2DRaycasterEditor: 8331edda7b8106578331edda7b810657 -> 
+  custom:DOTSType/UnityEngine.VFX.Utility.VFXTriggerEventBinder: 9eae5ee9143e96849eae5ee9143e9684 -> 
   custom:DOTSType/Unity.Entities.SectionMetadataSetup: 75ea136fdb0e54ba75ea136fdb0e54ba -> 
   custom:DOTSType/TurretSO: 5f354a89a982e3365f354a89a982e336 -> 
   custom:DOTSType/UnityEditor.AssetImporters.ScriptedImporterEditor: aedcd91b5eaa55f5aedcd91b5eaa55f5 -> 
@@ -1891,14 +1904,14 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEngine.Rendering.HighDefinition.GradientSky: 5dbd3be6c53b821c5dbd3be6c53b821c -> 
   custom:DOTSType/UnityEditor.Rendering.ProbeVolumeEditor: 46c8cc1077a0694346c8cc1077a06943 -> 
   custom:DOTSType/UnityEngine.Tilemaps.Tilemap: 9cf9663ddfb5e1679cf9663ddfb5e167 -> 
-  custom:DOTSType/UnityEditor.UI.SelectableEditor: c0550ba04ad82070c0550ba04ad82070 -> 
+  custom:DOTSType/UnityEditor.ProjectBrowser: 2d49667000dd209a2d49667000dd209a -> 
   custom:DOTSType/UnityEditor.Timeline.TrackAssetInspector: 7fcaae826ac53afd7fcaae826ac53afd -> 
-  custom:DOTSType/UnityEditor.FogEditor: db1d7e3e1b124643db1d7e3e1b124643 -> 
+  custom:DOTSType/UnityEditor.UI.SelectableEditor: c0550ba04ad82070c0550ba04ad82070 -> 
   custom:DOTSType/UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback: 5857592dc9e76a695857592dc9e76a69 -> 
   custom:DOTSType/UnityEditor.DefaultAsset: 97c10ac1a8a83d1f97c10ac1a8a83d1f -> 
   custom:DOTSType/UnityEditor.Search.ASIEI0F: 75ece7c982f7093075ece7c982f70930 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnTriggerEnterMessageListener: 01b423765c5a6be501b423765c5a6be5 -> 
-  custom:DOTSType/UnityEditor.ProjectBrowser: 2d49667000dd209a2d49667000dd209a -> 
+  custom:DOTSType/UnityEditor.FogEditor: db1d7e3e1b124643db1d7e3e1b124643 -> 
   custom:DOTSType/UnityEditor.LODGroupEditor: 5d9b9a9cabdf27385d9b9a9cabdf2738 -> 
   custom:DOTSType/UnityEditor.MeshColliderEditor: 4e75ccab64f634ce4e75ccab64f634ce -> 
   custom:DOTSType/UnityEngine.Texture3D: 020dbc7fd2ad32a5020dbc7fd2ad32a5 -> 
@@ -1921,6 +1934,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.MeshRendererEditor: bb89bf782de478c7bb89bf782de478c7 -> 
   custom:DOTSType/UnityEditor.ProjectWindowCallback.DoCreateScene: 9f6e28b122ac23649f6e28b122ac2364 -> 
   custom:DOTSType/Unity.VisualScripting.StateMachine: be771dece36e1e1ebe771dece36e1e1e -> 
+  custom:DOTSType/UnityEditor.Android.AndroidExtensionData: 6fd5e45425892cee6fd5e45425892cee -> 
   custom:DOTSType/Unity.Physics.Authoring.BakeStaticRoot: 8c7d60cddea5514b8c7d60cddea5514b -> 
   custom:DOTSType/UnityEditor.VFX.VFXSlotCameraBuffer: 43b4bf4dc432717c43b4bf4dc432717c -> 
   custom:DOTSType/UnityEditor.Build.Reporting.StrippingInfo: 4cbcafdd7c2e093c4cbcafdd7c2e093c -> 
@@ -1956,8 +1970,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/TMPro.TMP_FontAsset: 54812e39fb828a8254812e39fb828a82 -> 
   custom:DOTSType/UnityEngine.Rendering.UI.DebugUIHandlerValue: 810a85ac517c5c63810a85ac517c5c63 -> 
   custom:DOTSType/UnityEditor.VFX.Operator.SphericalToRectangular: ece441bee20ba331ece441bee20ba331 -> 
-  custom:DOTSType/UnityEditor.SceneVisibilityManager: 67bdd9361a7da74467bdd9361a7da744 -> 
   custom:DOTSType/UnityEditor.Splines.SplineDataConversionWindow: f0276fc9a7fd8a93f0276fc9a7fd8a93 -> 
+  custom:DOTSType/UnityEditor.SceneVisibilityManager: 67bdd9361a7da74467bdd9361a7da744 -> 
   custom:DOTSType/UnityEditor.VFX.Operator.Ceiling: 5fe304f250fd9c915fe304f250fd9c91 -> 
   custom:DOTSType/UnityEditor.VFX.VFXSpawnerBurst: be8bfffa7696da82be8bfffa7696da82 -> 
   custom:DOTSType/UnityEditor.Audio.AudioMixerEffectController: a071f9ff84b78070a071f9ff84b78070 -> 
@@ -2165,8 +2179,8 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.UI.RawImageEditor: cf34b1b9aacf4212cf34b1b9aacf4212 -> 
   custom:DOTSType/UnityEngine.Experimental.Rendering.RayTracingShader: 6523dfeffc100cf26523dfeffc100cf2 -> 
   custom:DOTSType/UnityEngine.TextAsset: 81bc475276b4ddf181bc475276b4ddf1 -> 
-  custom:DOTSType/UnityEditor.AudioSourceInspector: fa924bd9fa967dc7fa924bd9fa967dc7 -> 
   custom:DOTSType/UnityEditor.InspectorWindow: e38898f716c1b4a8e38898f716c1b4a8 -> 
+  custom:DOTSType/UnityEditor.AudioSourceInspector: fa924bd9fa967dc7fa924bd9fa967dc7 -> 
   custom:DOTSType/Unity.VisualScripting.UnityOnTriggerExitMessageListener: 493014f61050cdba493014f61050cdba -> 
   custom:DOTSType/UnityEditor.VFX.Block.SetAttribute: 559984466658ad40559984466658ad40 -> 
   custom:DOTSType/UnityEngine.UIElements.UIDocument: 06657f51482b25bd06657f51482b25bd -> 
@@ -2296,5 +2310,144 @@ AssetImportParameters requested are different than current active one (requested
   custom:DOTSType/UnityEditor.Rendering.HighDefinition.HDReflectionProbeEditor: 6688f143bb3ba4e96688f143bb3ba4e9 -> 
   custom:DOTSType/UnityEditor.Search.ASIEI05: 443471f4b46f9067443471f4b46f9067 -> 
   custom:DOTSType/UnityEditor.VFX.HDRP.VFXHDRPSubOutput: 5665f73fd0c521065665f73fd0c52106 -> 
-TcpMessagingSession - receive error
-AssetImportWorkerClient::OnTransportError - code=10054 error=An existing connection was forcibly closed by the remote host.
+========================================================================
+Received Import Request.
+  Time since last request: 19996.347502 seconds.
+  path: Packages/com.unity.collections/DocCodeSamples.Tests/DocCodeSamples.Tests.asmdef
+  artifactKey: Guid(d1fecb7e41996c7468b18df518b721d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collections/DocCodeSamples.Tests/DocCodeSamples.Tests.asmdef using Guid(d1fecb7e41996c7468b18df518b721d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c5fc511431b2b3ee5bbfa501ea16196') in 0.015285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Packages/com.unity.burst/Runtime/Unity.Burst.asmdef
+  artifactKey: Guid(2665a8d13d1b3f18800f46e256720795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.burst/Runtime/Unity.Burst.asmdef using Guid(2665a8d13d1b3f18800f46e256720795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48f4576e64e57c55eac17da6872ae9c8') in 0.000580 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Packages/com.unity.testtools.codecoverage/Editor/CoverageFormats/OpenCover/Model/Model.asmdef
+  artifactKey: Guid(19c3df1967929405fba735480b3da9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.testtools.codecoverage/Editor/CoverageFormats/OpenCover/Model/Model.asmdef using Guid(19c3df1967929405fba735480b3da9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48f8cc105b4e7c3e17c0c237724904fc') in 0.000508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.138719 seconds.
+  path: Packages/com.unity.collections/Unity.Collections.Tests.Playmode/Unity.Collections.Tests.Playmode.asmdef
+  artifactKey: Guid(5e96082520aa86a458e400b89afe93a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collections/Unity.Collections.Tests.Playmode/Unity.Collections.Tests.Playmode.asmdef using Guid(5e96082520aa86a458e400b89afe93a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd9bb4f863a54d6e0c7b9c1e3b4d7e4') in 0.000663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Packages/com.unity.entities/Unity.Entities.Editor.PerformanceTests/Unity.Entities.Editor.PerformanceTests.asmdef
+  artifactKey: Guid(221b8f40a8937394c82cce92935de37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.entities/Unity.Entities.Editor.PerformanceTests/Unity.Entities.Editor.PerformanceTests.asmdef using Guid(221b8f40a8937394c82cce92935de37b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eaf602b3783d51a704716f42abcb4b5') in 0.000610 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.273102 seconds.
+  path: Packages/com.unity.entities/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef
+  artifactKey: Guid(51dc02c04d39a9b46ab6005ac84f4a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.entities/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef using Guid(51dc02c04d39a9b46ab6005ac84f4a4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbba13633084d5b3c7dd993d6dfbbbf3') in 0.000517 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Packages/com.unity.entities/Unity.Transforms.PerformanceTests/Unity.Transforms.PerformanceTests.asmdef
+  artifactKey: Guid(c1825663e7e094b6ca750434732f57c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.entities/Unity.Transforms.PerformanceTests/Unity.Transforms.PerformanceTests.asmdef using Guid(c1825663e7e094b6ca750434732f57c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8055af70bf8c467df36619163012f47e') in 0.000427 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Packages/com.unity.test-framework.performance/Tests/Runtime/Unity.PerformanceTesting.Tests.Runtime.asmdef
+  artifactKey: Guid(893deb69258ad1d4ebbf9452e5a25dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework.performance/Tests/Runtime/Unity.PerformanceTesting.Tests.Runtime.asmdef using Guid(893deb69258ad1d4ebbf9452e5a25dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6fa48a2c10cb103602f82ad95665ad4') in 0.000537 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Packages/com.unity.test-framework.performance/Runtime/Unity.PerformanceTesting.asmdef
+  artifactKey: Guid(c0dd0d10738d4ad4a9de57c559d0ca1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework.performance/Runtime/Unity.PerformanceTesting.asmdef using Guid(c0dd0d10738d4ad4a9de57c559d0ca1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4ef460a547b6fd7e7ae62d3eb711b1b') in 0.000651 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Packages/com.unity.entities/Unity.Mathematics.Extensions/Unity.Mathematics.Extensions.asmdef
+  artifactKey: Guid(e04e6c86a9f3947eb95fded39f9e60cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.entities/Unity.Mathematics.Extensions/Unity.Mathematics.Extensions.asmdef using Guid(e04e6c86a9f3947eb95fded39f9e60cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540e6ec401bc06453e25645652ae361b') in 0.000758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Packages/com.unity.test-framework.performance/Editor/Unity.PerformanceTesting.Editor.asmdef
+  artifactKey: Guid(9f843d4b38153f04b9cee0502d568525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.test-framework.performance/Editor/Unity.PerformanceTesting.Editor.asmdef using Guid(9f843d4b38153f04b9cee0502d568525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f7c4a6b4e0fe0fda8aeeeb72951766') in 0.001010 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Packages/com.unity.performance.profile-analyzer/Tests/Editor/Unity.Performance.Profile-Analyzer.EditorTests.asmdef
+  artifactKey: Guid(97505fd80b553409c995f274ad2a533b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.performance.profile-analyzer/Tests/Editor/Unity.Performance.Profile-Analyzer.EditorTests.asmdef using Guid(97505fd80b553409c995f274ad2a533b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc2531445f3619c7c203ad2a76862b3') in 0.000825 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Packages/com.unity.mathematics/Unity.Mathematics.Editor/Unity.Mathematics.Editor.asmdef
+  artifactKey: Guid(329b4ccd385744985bf3f83cfd77dfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.mathematics/Unity.Mathematics.Editor/Unity.Mathematics.Editor.asmdef using Guid(329b4ccd385744985bf3f83cfd77dfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c96152f5470d907705457c5e3f058cf') in 0.000683 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 56.917645 seconds.
+  path: Packages/com.unity.entities.graphics/Unity.Entities.Graphics/Unity.Entities.Graphics.asmdef
+  artifactKey: Guid(7a450cf7ca9694b5a8bfa3fd83ec635a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.entities.graphics/Unity.Entities.Graphics/Unity.Entities.Graphics.asmdef using Guid(7a450cf7ca9694b5a8bfa3fd83ec635a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413b2bab9a10a9af5778d970d76b4ef0') in 0.000560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Packages/com.unity.entities.graphics/Unity.Entities.Graphics.Tests/Unity.Entities.Graphics.Tests.asmdef
+  artifactKey: Guid(ac35034034affa945a0672efca427990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.entities.graphics/Unity.Entities.Graphics.Tests/Unity.Entities.Graphics.Tests.asmdef using Guid(ac35034034affa945a0672efca427990) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1698e21602206980ea4140e4918c6813') in 0.000561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.374078 seconds.
+  path: Packages/com.unity.physics/Unity.Physics.Editor/Unity.Physics.Editor.asmdef
+  artifactKey: Guid(3438610b0a83016488db5062ec247a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.physics/Unity.Physics.Editor/Unity.Physics.Editor.asmdef using Guid(3438610b0a83016488db5062ec247a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79138dc3a80177e8780c1bc888558915') in 0.000609 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Packages/com.unity.shadergraph/Editor/Unity.ShaderGraph.Editor.asmdef
+  artifactKey: Guid(be0903cd8e1546f498710afdc59db5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.shadergraph/Editor/Unity.ShaderGraph.Editor.asmdef using Guid(be0903cd8e1546f498710afdc59db5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01b11332a6abf14437ee26b422e8ad9f') in 0.000420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

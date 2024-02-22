@@ -83,27 +83,31 @@ public class TomBenBlockParser : MonoBehaviour
         if (ReachedEnd())
             return;
 
-        //TODO Create Regex for header info
-        //string regexPattern = "(type|wave|cluster) - (\\d+) \\((.*?)\\) _Tom (.*?) _Ben";
+		//TODO Create Regex for header info
+		string regexPattern = "(type|wave|cluster)\\s*-\\s*(\\d+)\\s*(?:\\(([\\w\\s]+)\\))?\\s*_Tom\\s*(.*?)\\s*_Ben";
 
-        //Regex regex = new Regex(regexPattern);
+		Regex regex = new Regex(regexPattern);
 
-        //Match regexMatch = regex.Match(fileContent);
-        //if (regexMatch.Success)
-        //{
-        //	currentBlock.type = regexMatch.Groups[1].Value;
-        //	//currentBlock.id = regexMatch.Groups[2].Value;
-        //	currentBlock.name = regexMatch.Groups[3].Value;
-        //	currentBlock.content = regexMatch.Groups[4].Value;
+		Match regexMatch = regex.Match(fileContent);
+		if (regexMatch.Success)
+		{
+			for (int i = 1; i < regexMatch.Groups.Count; i++)
+			{
+				print($"Capture group {i} = {regexMatch.Groups[i]}");
 
-        //}
-        //TODO Move Matches
-        //(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
-        //(type|wave|cluster) - (\d+) \((.*?)\) _Tom (.*?) _Ben
+			}
+			//currentBlock.type = regexMatch.Groups[1].Value;
+			////currentBlock.id = regexMatch.Groups[2].Value;
+			//currentBlock.name = regexMatch.Groups[3].Value;
+			//currentBlock.content = regexMatch.Groups[4].Value;
+
+		}
+		//TODO Move Matches
+		//(type|wave|cluster)\s*- (\d+)\s*\(([\w\s]+)\)\s*_Tom [\w\s]+\s*=>(\d+)
 		//Regex that works without a name
-        //(type|wave|cluster)\s*-\s*(\d+)\s*(?:\(([\w\s]+)\))?\s*_Tom\s*(.*?)\s*_Ben
+		//(type|wave|cluster)\s*-\s*(\d+)\s*(?:\(([\w\s]+)\))?\s*_Tom\s*(.*?)\s*_Ben
 
-        ChangeState(ParserState.InsideBlockBody);
+		ChangeState(ParserState.InsideBlockBody);
 	}
 
 	private void ParseInsideBlock()
