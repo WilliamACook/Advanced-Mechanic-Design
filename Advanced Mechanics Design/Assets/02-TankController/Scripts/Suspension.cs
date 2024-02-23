@@ -54,14 +54,11 @@ public class Suspension : MonoBehaviour
 
 		m_Wheel.localPosition = Vector3.up * (m_SpringSize - susOffset);
 
-		if (grounded)
-		{
-			Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
-			float susVel = Vector3.Dot(localDir, worldVec);
-			float susForce = (susOffset * stiffness) - (susVel * damping);
-			m_RB.AddForce(localDir * (susForce / m_RB.mass));
-
-		}
+		Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
+		float susVel = Vector3.Dot(localDir, worldVec);
+		float susForce = (susOffset * stiffness) - (susVel * damping);
+		//m_RB.AddForce(localDir * susForce);
+		m_RB.AddForceAtPosition(localDir * susForce, worldVec);
 
 
 		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
