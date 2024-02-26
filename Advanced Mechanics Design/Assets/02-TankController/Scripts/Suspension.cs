@@ -71,7 +71,8 @@ public class Suspension : MonoBehaviour
 		float susVel = Vector3.Dot(localDir, worldVec);
 		float susForce = (susOffset * stiffness) - (susVel * damping);
 		//m_RB.AddForce(localDir * susForce);
-		m_RB.AddForceAtPosition(localDir * susForce, worldVec);
+		m_RB.AddForce(localDir * (susForce / m_RB.mass));
+		//m_RB.AddForceAtPosition(localDir * susForce, worldVec);
 
 		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
 

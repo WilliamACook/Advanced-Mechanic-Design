@@ -11,6 +11,7 @@ public class Barrel : MonoBehaviour
 	private int m_SelectedShell;
 
 	private float m_CurrentDispersion;
+	private bool m_CanFire = true;
 
 	public void Init(TankSO inData)
 	{
@@ -19,11 +20,19 @@ public class Barrel : MonoBehaviour
 
 	public void Fire()
 	{
-		print(transform.localPosition);
-		print("Fire");
-		var m_Shell = Instantiate(m_ShellPrefab, transform.position, transform.rotation);
-		m_Shell.GetComponent<Rigidbody>().velocity = transform.localPosition * m_Data.ShellData.Velocity;
+		if (!m_CanFire)
+			return;
 
+		StartCoroutine(FireCoroutine());
+	}
+
+	private IEnumerator FireCoroutine()
+	{
+		m_CanFire = false;
+		var m_Shell = Instantiate(m_ShellPrefab, transform.position, transform.rotation);
+		m_Shell.GetComponent<Rigidbody>().velocity = transform.forward * m_Data.ShellData.Velocity;
+		yield return new WaitForSeconds(m_Data.BarrelData.ReloadTime);
+		m_CanFire = true;
 	}
 
 }
