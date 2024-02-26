@@ -11,6 +11,7 @@ public class Parse : MonoBehaviour
 
 	private void Awake()
 	{
+		print(inputFile);
 		if (!File.Exists(inputFile))
 			throw new UnityException("Can't open file");
 

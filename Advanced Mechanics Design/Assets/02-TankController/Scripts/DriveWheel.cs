@@ -35,7 +35,7 @@ public class DriveWheel : MonoBehaviour
 
 	private void Handle_WheelGroundedChanged(bool newGrounded)
 	{
-		Debug.Log("Grounded changed");
+		//Debug.Log("Grounded changed");
         if (newGrounded)
         {
             m_NumGroundedWheels++;
@@ -52,7 +52,7 @@ public class DriveWheel : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Debug.Log(m_NumGroundedWheels);
+		//Debug.Log(m_NumGroundedWheels);
 		//Debug.Log(m_Acceleration);
 		//Debug.Log(m_RB.mass);
 		float currentSpeed = m_RB.velocity.magnitude;

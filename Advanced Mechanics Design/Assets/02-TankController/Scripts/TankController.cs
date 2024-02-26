@@ -14,6 +14,7 @@ public class TankController : MonoBehaviour
 	[SerializeField] private CameraController m_CameraController;
 	[SerializeField] private Turret m_TurretController;
 	[SerializeField] private DriveWheel[] m_DriveWheels;
+	[SerializeField] private Barrel m_barrel;
 	private int m_NumSuspensionsGrounded;
 
 	private float m_InAccelerate;
@@ -137,6 +138,7 @@ public class TankController : MonoBehaviour
 	{
 		while (m_IsFiring)
 		{
+			m_barrel.Fire();
 			yield return null;
 		}
 	}

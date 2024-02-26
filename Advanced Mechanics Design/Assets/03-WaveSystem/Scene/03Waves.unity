@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd835591092a6e4ebe940457885e221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputFile: Assets/03-WaveSystem/TestFiles/AMD_03_Simple_E.TomBen
+  inputFile: Assets/03-WaveSystem/TestFiles/AMD_03_Duplicate_E.TomBen
   blocks:
   - type: 
     name: 

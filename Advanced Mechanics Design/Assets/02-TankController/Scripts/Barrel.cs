@@ -14,11 +14,15 @@ public class Barrel : MonoBehaviour
 
 	public void Init(TankSO inData)
 	{
-		
+		m_Data = inData;
 	}
 
 	public void Fire()
 	{
+		print(transform.localPosition);
+		print("Fire");
+		var m_Shell = Instantiate(m_ShellPrefab, transform.position, transform.rotation);
+		m_Shell.GetComponent<Rigidbody>().velocity = transform.localPosition * m_Data.ShellData.Velocity;
 
 	}
 

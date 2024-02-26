@@ -15,13 +15,13 @@ public class Suspension : MonoBehaviour
 	[SerializeField] float damping;
 
 	private SuspensionSO m_Data;
-	private float m_SpringSize = 1.5f;
+	private float m_SpringSize = 0.75f;
 	private bool m_Grounded;
 
 	public void Init(SuspensionSO inData)
 	{
 		m_Data = inData;
-		stiffness = m_Data.SuspensionStrength;
+		stiffness =m_Data.SuspensionStrength;
 		damping = m_Data.SuspensionDamper;
 	}
 
@@ -32,14 +32,27 @@ public class Suspension : MonoBehaviour
 
         bool grounded = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
 		if (grounded)
-			//Debug.Log("Tank is grounded");
+		{
+			
+			if(m_Grounded != grounded)
+			{
+				m_Grounded = grounded;
+				OnGroundedChanged?.Invoke(m_Grounded);
+				Debug.Log("Tank is grounded");
+			}
+		}
+		else
+		{
+			if(m_Grounded != grounded)
+			{
+				m_Grounded = grounded;
+				OnGroundedChanged?.Invoke(m_Grounded);
+				Debug.Log("NotGrounded");
+			}
+				
+		}
 
-        if (grounded != m_Grounded)
-        {
-            m_Grounded = grounded;
-            OnGroundedChanged?.Invoke(m_Grounded);
-        }
-
+      
         return m_Grounded;
     }
 
@@ -52,7 +65,7 @@ public class Suspension : MonoBehaviour
 		Vector3 springVec = transform.position - transform.parent.position;
 		float susOffset = m_SpringSize - Vector3.Dot(springVec, localDir);
 
-		m_Wheel.localPosition = Vector3.up * (m_SpringSize - susOffset);
+		//m_Wheel.localPosition = Vector3.up * (m_SpringSize - susOffset);
 
 		Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
 		float susVel = Vector3.Dot(localDir, worldVec);
@@ -60,8 +73,13 @@ public class Suspension : MonoBehaviour
 		//m_RB.AddForce(localDir * susForce);
 		m_RB.AddForceAtPosition(localDir * susForce, worldVec);
 
-
 		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
 
+	}
+
+	private void OnDrawGizmos()
+	{
+		Debug.DrawRay(transform.position, transform.up, Color.red, m_SpringSize);
+		//Debug.DrawLine(transform.position, transform.up, Color.red, m_SpringSize);
 	}
 }

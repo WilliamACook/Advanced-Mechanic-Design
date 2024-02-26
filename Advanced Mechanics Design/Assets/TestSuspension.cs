@@ -33,5 +33,6 @@ public class TestSuspension : MonoBehaviour
 		float susForce = (susOffset * stiffness) - (susVel * damping);
 
 		rb.AddForce(localDir * (susForce / rb.mass));
+		//Debug.Log(localDir * (susForce / rb.mass));
     }
 }
