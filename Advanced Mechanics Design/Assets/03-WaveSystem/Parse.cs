@@ -11,12 +11,15 @@ public class Parse : MonoBehaviour
 
 	private void Awake()
 	{
-		print(inputFile);
+		//print(inputFile);
 		if (!File.Exists(inputFile))
 			throw new UnityException("Can't open file");
-
+	
 		//Get Blocks
 		TomBenBlockParser blockParser = new TomBenBlockParser();
 		blocks = blockParser.ParseFromFile(inputFile);
+
+		//Make a parser.. pass in the blocks
+		// - it spits out usable wave objects (clusters, waves, types, blah.)
 	}
 }

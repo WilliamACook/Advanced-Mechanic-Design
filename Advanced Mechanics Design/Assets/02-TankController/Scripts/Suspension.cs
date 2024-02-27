@@ -15,7 +15,7 @@ public class Suspension : MonoBehaviour
 	[SerializeField] float damping;
 
 	private SuspensionSO m_Data;
-	private float m_SpringSize = 0.75f;
+	private float m_SpringSize = 0.5f;
 	private bool m_Grounded;
 
 	public void Init(SuspensionSO inData)
@@ -38,7 +38,7 @@ public class Suspension : MonoBehaviour
 			{
 				m_Grounded = grounded;
 				OnGroundedChanged?.Invoke(m_Grounded);
-				Debug.Log("Tank is grounded");
+				//Debug.Log("Tank is grounded");
 			}
 		}
 		else
@@ -47,7 +47,7 @@ public class Suspension : MonoBehaviour
 			{
 				m_Grounded = grounded;
 				OnGroundedChanged?.Invoke(m_Grounded);
-				Debug.Log("NotGrounded");
+				//Debug.Log("NotGrounded");
 			}
 				
 		}
@@ -76,11 +76,39 @@ public class Suspension : MonoBehaviour
 
 		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
 
+		//pseudocode:
+		//----------
+		// - raycast; if no hit:
+		//		- set "displacement" to the max length of suspension
+		// - if hit:
+		//		- if distance > max length.. set to max length
+		//		- if distance <= max length then:
+		//			- move the wheel to hit point
+		//			- push the tank up .. force should be inversely proportional to distance between origin and hitpoint: (closer = more force)
+
+		RaycastHit hit;
+
+		bool hitFloor = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
+		if(GetGrounded())
+		{
+			if(hitFloor)
+			{
+				if(hit.distance > m_SpringSize)
+				{
+					hit.distance = m_SpringSize;
+				}
+				if(hit.distance <= m_SpringSize)
+				{ 
+					m_Wheel.localPosition = hit.transform.position - transform.position;
+					//m_Wheel.localPosition = new Vector3(0, hit.transform.position.y * (m_SpringSize - susOffset), 0);
+				}
+			}
+		}
 	}
 
 	private void OnDrawGizmos()
 	{
-		Debug.DrawRay(transform.position, transform.up, Color.red, m_SpringSize);
+		Debug.DrawRay(transform.position, -transform.up, Color.red, m_SpringSize);
 		//Debug.DrawLine(transform.position, transform.up, Color.red, m_SpringSize);
 	}
 }

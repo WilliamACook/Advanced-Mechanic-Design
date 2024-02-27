@@ -1,3 +1,4 @@
+using Codice.CM.Client.Differences.Merge;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,7 +6,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-public class TomBenBlockParser : MonoBehaviour
+public class TomBenBlockParser
 {
 	private ParsedBlock currentBlock = new ParsedBlock();
 	private List<ParsedBlock> blocks = new List<ParsedBlock>();
@@ -60,8 +61,18 @@ public class TomBenBlockParser : MonoBehaviour
 
 		fileContent = File.ReadAllText(filePath);
 
+		int iter = 0;
+
 		while(!ReachedEnd())
 		{
+			if (iter++ > 1000)
+			{
+				Debug.Log("max iters reached");
+				break;
+			}
+
+			//Debug.Log(state);
+
 			if (state == ParserState.OutsideBlock)
 				ParseOutsideBlock();
 
@@ -84,21 +95,27 @@ public class TomBenBlockParser : MonoBehaviour
             return;
 
 		//TODO Create Regex for header info
-		string regexPattern = "(type|wave|cluster)\\s*-\\s*(\\d+)\\s*(?:\\(([\\w\\s]+)\\))?\\s*_Tom\\s*(.*?)\\s*_Ben";
+		//string regexPattern = "(type|wave|cluster)\\s*-\\s*(\\d+)\\s*(?:\\(([\\w\\s]+)\\))?\\s*_Tom\\s*(.*?)\\s*_Ben";
+		string regexPattern = @"\s*-\s*(\d+)\s*(?:\(([\w\s]+)\))?\s*_Tom";
 
 		Regex regex = new Regex(regexPattern);
 
-		Match regexMatch = regex.Match(fileContent);
+		Match regexMatch = regex.Match(charBuffer);
+		//Debug.Log(charBuffer);
+
 		if (regexMatch.Success)
 		{
 			for (int i = 1; i < regexMatch.Groups.Count; i++)
 			{
-				print($"Capture group {i} = {regexMatch.Groups[i]}");
-
+				//Debug.Log($"Capture group {i} = {regexMatch.Groups[i]}");
 			}
+
+			currentBlock.id = int.Parse(regexMatch.Groups[1].Value);
+			currentBlock.name = regexMatch.Groups[2].Value;
+
+
 			//currentBlock.type = regexMatch.Groups[1].Value;
-			////currentBlock.id = regexMatch.Groups[2].Value;
-			//currentBlock.name = regexMatch.Groups[3].Value;
+			//currentBlock.id = int.Parse(regexMatch.Groups[2].Value);
 			//currentBlock.content = regexMatch.Groups[4].Value;
 
 		}
@@ -115,8 +132,24 @@ public class TomBenBlockParser : MonoBehaviour
 		while (!BufferHas("_Ben") && !ReachedEnd())
 			NextChar();
 
-		if(ReachedEnd())
-			return;
+		//reached the end or a ending brace.. so change
+		//state to outside block
+
+		string tempString = charBuffer.Trim();
+		tempString = tempString[..^4];
+
+		currentBlock.content = tempString.Trim();
+
+		//string.IsNullOrWhiteSpace("     ");
+
+		//Add the new block
+		blocks.Add(currentBlock);
+		currentBlock = new ParsedBlock();
+
+		ChangeState(ParserState.OutsideBlock);
+
+		//if(ReachedEnd())
+		//return;
 	}
 
 	private void ParseOutsideBlock()
