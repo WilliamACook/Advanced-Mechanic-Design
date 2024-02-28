@@ -21,5 +21,8 @@ public class Parse : MonoBehaviour
 
 		//Make a parser.. pass in the blocks
 		// - it spits out usable wave objects (clusters, waves, types, blah.)
+		
+		BlockStream blockStream = new BlockStream();
+		blockStream.ProcessBlocks(blocks);
 	}
 }
