@@ -11,23 +11,22 @@ public class Suspension : MonoBehaviour
 	[SerializeField] private Rigidbody m_RB;
 	[SerializeField] private LayerMask m_LayerMask;
 
-	[SerializeField] float stiffness;
-	[SerializeField] float damping;
+	[SerializeField] float springStrength;
+	[SerializeField] float springDamper;
 
 	private SuspensionSO m_Data;
-	private float m_SpringSize = 0.5f;
+	private float m_SpringSize = 0.3f;
 	private bool m_Grounded;
 
 	public void Init(SuspensionSO inData)
 	{
 		m_Data = inData;
-		stiffness =m_Data.SuspensionStrength;
-		damping = m_Data.SuspensionDamper;
+		springStrength = m_Data.SuspensionStrength;
+		springDamper = m_Data.SuspensionDamper;
 	}
 
 	public bool GetGrounded()
 	{
-		Debug.DrawRay(transform.position, -transform.up, Color.green, m_SpringSize);
 		RaycastHit hit;
 
         bool grounded = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
@@ -58,23 +57,21 @@ public class Suspension : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Vector3 direction = Vector3.down;
-		Vector3 localDir = transform.TransformDirection(direction);
-		bool grounded = GetGrounded();
+		//Vector3 direction = Vector3.down;
+		//Vector3 localDir = transform.TransformDirection(direction);
+		//bool grounded = GetGrounded();
 
-		Vector3 springVec = transform.position - transform.parent.position;
-		float susOffset = m_SpringSize - Vector3.Dot(springVec, localDir);
+		//Vector3 springVec = transform.position - transform.parent.position;
+		//float susOffset = m_SpringSize - Vector3.Dot(springVec, localDir);
 
-		//m_Wheel.localPosition = Vector3.up * (m_SpringSize - susOffset);
+		////m_Wheel.localPosition = Vector3.up * (m_SpringSize - susOffset);
 
-		Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
-		float susVel = Vector3.Dot(localDir, worldVec);
-		float susForce = (susOffset * stiffness) - (susVel * damping);
-		//m_RB.AddForce(localDir * susForce);
-		m_RB.AddForce(localDir * (susForce / m_RB.mass));
+		//Vector3 worldVec = m_RB.GetPointVelocity(transform.position);
+		//float susVel = Vector3.Dot(localDir, worldVec);
+		//float susForce = (susOffset * stiffness) - (susVel * damping);
 		//m_RB.AddForceAtPosition(localDir * susForce, worldVec);
 
-		//float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
+		////float susForce = (susOffset * m_Data.SuspensionStrength) - (susVel * m_Data.SuspensionDamper);
 
 		//pseudocode:
 		//----------
@@ -89,26 +86,48 @@ public class Suspension : MonoBehaviour
 		RaycastHit hit;
 
 		bool hitFloor = Physics.Raycast(transform.position, -transform.up, out hit, m_SpringSize, m_LayerMask);
-		if(GetGrounded())
+		float upwardForceMultiplier = 10f;
+        //Debug.DrawRay(transform.position, -transform.up * m_SpringSize, Color.red, 0.1f);
+        if (GetGrounded())
 		{
 			if(hitFloor)
-			{
+			{				
+
+				Vector3 springDir = m_Wheel.up;
+
+				Vector3 tireWorldvel = m_RB.GetPointVelocity(m_Wheel.position);
+
+				//Suspension rest distance?
+                Vector3 springVec = transform.position - transform.parent.position;
+
+				//Something is wrong with this >.<
+				Debug.DrawRay(transform.parent.position, transform.position);
+
+				float suspensionRestDist = springVec.magnitude;
+
+				float offset = suspensionRestDist - hit.distance;
+
+				float vel = Vector3.Dot(springDir, tireWorldvel);
+
+				float force = (offset * springStrength) - (vel * springDamper);
+				m_RB.AddForceAtPosition(springDir * force, m_Wheel.position);
+
 				if(hit.distance > m_SpringSize)
 				{
 					hit.distance = m_SpringSize;
 				}
 				if(hit.distance <= m_SpringSize)
-				{ 
-					m_Wheel.localPosition = hit.transform.position - transform.position;
-					//m_Wheel.localPosition = new Vector3(0, hit.transform.position.y * (m_SpringSize - susOffset), 0);
-				}
+				{					
+                    Vector3 newLocalPos = transform.InverseTransformPoint(hit.point) + new Vector3(0, m_SpringSize, 0);
+					m_Wheel.localPosition = newLocalPos;                  
+                }
 			}
 		}
 	}
 
 	private void OnDrawGizmos()
 	{
-		Debug.DrawRay(transform.position, -transform.up, Color.red, m_SpringSize);
+		//Debug.DrawRay(transform.position, -transform.up, Color.red, m_SpringSize);
 		//Debug.DrawLine(transform.position, transform.up, Color.red, m_SpringSize);
 	}
 }
