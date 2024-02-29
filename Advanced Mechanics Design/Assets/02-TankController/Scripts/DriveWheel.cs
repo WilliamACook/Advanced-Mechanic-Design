@@ -10,7 +10,9 @@ public class DriveWheel : MonoBehaviour
 	[SerializeField] private Rigidbody m_RB;
 	[SerializeField] private TankSO m_Data;
 	[SerializeField] private Suspension[] m_SuspensionWheels;
+
 	private int m_NumGroundedWheels;
+	private int m_TotalWheels;
 	private float m_ForwardMaxSpeed;
 	private float m_ReverseMaxSpeed;
 	private bool m_Grounded;
@@ -52,11 +54,13 @@ public class DriveWheel : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		//Debug.Log(m_NumGroundedWheels);
+		Debug.Log(m_NumGroundedWheels);
 		//Debug.Log(m_Acceleration);
 		//Debug.Log(m_RB.mass);
 		float currentSpeed = m_RB.velocity.magnitude;
-		if (m_Acceleration == 1)
+        float groundedWheelsRatio = (float)m_NumGroundedWheels / (float)m_TotalWheels;
+
+        if (m_Acceleration == 1 && m_NumGroundedWheels > 0)
 		{
 			Vector3 forward = transform.forward * m_Data.EngineData.HorsePower;
 			m_RB.AddForce(forward);
@@ -65,8 +69,7 @@ public class DriveWheel : MonoBehaviour
 			if (currentSpeed > m_ForwardMaxSpeed)
 				m_RB.velocity = m_RB.velocity.normalized * m_ForwardMaxSpeed;
 		}
-
-		if (m_Acceleration == -1)
+		else if (m_Acceleration == -1 && m_NumGroundedWheels > 0)
 		{
             Vector3 reverse = -transform.forward * m_Data.EngineData.HorsePower;
             m_RB.AddForce(reverse);
